@@ -3,5 +3,3 @@
 Benchmark results:
 
 {% include_relative benchmark_results.md %}
-
-That's everything.

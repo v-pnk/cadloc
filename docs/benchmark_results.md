@@ -1,7 +1,7 @@
-Listed results are the recalls at 10 % / 20 % / 30 % mean DCRE (normalized by query image diagonal).
+Listed results are the recalls at 10 % / 20 % / 30 % DCRE (normalized by query image diagonal).
 
-| method | paper | code | results  | 
-| :--- | :---: | :---: | :---: |
-| pure guessing | [link](www.example.org) | - | 0.01 / 0.02 / 0.03 |
+| method | paper | code | mean GA | max. GA | mean LR | max. LR |
+| :--- | :---: | :---: | :---: | :---: | :---: | :---: |
+| 012345678901234567890123456789 | [link](https://www.example.org) | [link](https://www.example.org) | 100.0 / 100.0 / 100.0 | 100.0 / 100.0 / 100.0 | 100.0 / 100.0 / 100.0 | 100.0 / 100.0 / 100.0 |
 
-Last update: 2022-12-05
+Last update: 2022-12-07
