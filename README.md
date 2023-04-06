@@ -5,7 +5,7 @@ The evaluation tool needs few Python packages:
 ```
 conda create --name cadloc python=3.9
 conda activate cadloc
-pip3 install open3d==0.16 pycolmap==0.3 numpy argparse tqdm
+pip3 install open3d==0.17 pycolmap==0.3 numpy argparse tqdm
 ```
 ## Preparation of data for the benchmark
 ### Evaluation script usage
