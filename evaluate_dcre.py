@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 
-# Copyright (c) 2022, Vojtech Panek and Zuzana Kukelova and Torsten Sattler
+# Copyright (c) 2023, Vojtech Panek and Zuzana Kukelova and Torsten Sattler
 # All rights reserved.
 #
 # Redistribution and use in source and binary forms, with or without
@@ -44,30 +44,65 @@ parser.add_argument("--est_file", type=str, required=True,
     help="Path to the file with with pose estimates of query images")
 parser.add_argument("--colmap_gt", type=str, required=True,
     help="Path to the COLMAP model with GT query camera poses")
-parser.add_argument("--query_mesh", type=str, required=True,
-    help="Path to the query model in coordinate frame of the GT poses")
+parser.add_argument("--reference_mesh", type=str, required=True,
+    help="Path to the reference model in coordinate frame of the GT poses")
 parser.add_argument("--internet_mesh", type=str, required=True,
     help="Path to the Internet mesh used for alignment")
-parser.add_argument("--output_dcre", type=str, required=True,
-    help="Path to an output file containing image name and it's computed DCRE")
+parser.add_argument("--output_dcre", type=str, required=False,
+    help="Path to an output file containing the computed DCREs for each image")
+parser.add_argument("--print_html", action="store_true",
+    help="Print the results in HTML table format")
+parser.add_argument("--output_html", type=str, required=False,
+    help="Path to an output file containing the results in HTML table format")
 
 
 def main(args):
     assert os.path.isfile(args.est_file)
     assert os.path.isdir(args.colmap_gt)
-    assert os.path.isfile(args.query_mesh)
+    assert os.path.isfile(args.reference_mesh)
     assert os.path.isfile(args.internet_mesh)
 
+    print("- loading the estimated poses")
     est_poses_dict = read_est_file(args.est_file)
+
+    print("- loading the GT COLMAP model")
     colmap_gt_dict = read_colmap_model(args.colmap_gt)
-    query_mesh = o3d.io.read_triangle_model(args.query_mesh, False)
+
+    print("- loading the reference mesh")
+    reference_mesh = o3d.io.read_triangle_model(args.reference_mesh, False)
+
+    print("- loading the internet mesh")
     internet_mesh = o3d.io.read_triangle_model(args.internet_mesh, False)
 
-    evaluate(query_mesh, internet_mesh, colmap_gt_dict, est_poses_dict)
+    print("- running the evaluation")
+    results_dict = evaluate(reference_mesh, internet_mesh, colmap_gt_dict, est_poses_dict)
 
+    if args.output_dcre is not None:
+        write_dcre(args.output_dcre, results_dict)
+    
+    dcre_ga_mean_list = extract_dict_list(results_dict, "GA_mean")
+    recalls_ga_mean = compute_recall(dcre_ga_mean_list, [0.1, 0.2, 0.3], len(colmap_gt_dict))
+    dcre_ga_max_list = extract_dict_list(results_dict, "GA_max")
+    recalls_ga_max = compute_recall(dcre_ga_max_list, [0.1, 0.2, 0.3], len(colmap_gt_dict))
+    dcre_lr_mean_list = extract_dict_list(results_dict, "LR_mean")
+    recalls_lr_mean = compute_recall(dcre_lr_mean_list, [0.1, 0.2, 0.3], len(colmap_gt_dict))
+    dcre_lr_max_list = extract_dict_list(results_dict, "LR_max")
+    recalls_lr_max = compute_recall(dcre_lr_max_list, [0.1, 0.2, 0.3], len(colmap_gt_dict))
 
-def evaluate(query_mesh, internet_mesh, colmap_gt_dict, est_poses_dict):
+    print_results(recalls_ga_mean, recalls_ga_max, recalls_lr_mean, recalls_lr_max, args.print_html)
+    save_html(recalls_ga_mean, recalls_ga_max, recalls_lr_mean, recalls_lr_max, args.output_html)
+
+def evaluate(reference_mesh, internet_mesh, colmap_gt_dict, est_poses_dict):
     results_dict = {}
+
+    o3d.utility.set_verbosity_level(o3d.utility.VerbosityLevel.Warning)
+    
+    # - reusing the renderer (not definining it again for each image) is faster,
+    #   but fails when garbage collector tries to destroy the object
+    # osr_reference = o3d.visualization.rendering.OffscreenRenderer(800, 800)
+    # osr_reference.scene.add_model("mesh", reference_mesh)
+    # osr_internet = o3d.visualization.rendering.OffscreenRenderer(800, 800)
+    # osr_internet.scene.add_model("mesh", internet_mesh)
 
     for img_name in tqdm(list(est_poses_dict.keys())):
         est_img = est_poses_dict[img_name]
@@ -76,13 +111,21 @@ def evaluate(query_mesh, internet_mesh, colmap_gt_dict, est_poses_dict):
         # Render the depth maps
         # - from query model for ground truth pose
         query_gt_depth = render_depth(
-            query_mesh, gt_img["T"], gt_img["K"], gt_img["w"], gt_img["h"])
+            reference_mesh, gt_img["T"], gt_img["K"], gt_img["w"], gt_img["h"])
         # - from Internet model for estimated pose
         internet_est_depth = render_depth(
             internet_mesh, est_img["T"], gt_img["K"], gt_img["w"], gt_img["h"])
         # - from Internet model for grount truth pose
         internet_gt_depth = render_depth(
             internet_mesh, gt_img["T"], gt_img["K"], gt_img["w"], gt_img["h"])
+        # query_gt_depth = render_depth(
+        #     osr_reference, gt_img["T"], gt_img["K"], gt_img["w"], gt_img["h"])
+        # # - from Internet model for estimated pose
+        # internet_est_depth = render_depth(
+        #     osr_internet, est_img["T"], gt_img["K"], gt_img["w"], gt_img["h"])
+        # # - from Internet model for grount truth pose
+        # internet_gt_depth = render_depth(
+        #     osr_internet, gt_img["T"], gt_img["K"], gt_img["w"], gt_img["h"])
 
         # Compute DCRE on the globally aligned poses (GA)
         if valid_depth(internet_est_depth):
@@ -120,9 +163,12 @@ def evaluate(query_mesh, internet_mesh, colmap_gt_dict, est_poses_dict):
             dcre_lr_max = -1
             dcre_lr_mean = -1
         
-        results_dict[img_name] = {"GA_mean" : dcre_ga_mean, "GA_max" : dcre_ga_max, "LR_mean" : dcre_lr_mean, "LR_max" : dcre_lr_max}
+        results_dict[img_name] = {"GA_mean" : dcre_ga_mean, 
+                                  "GA_max" : dcre_ga_max, 
+                                  "LR_mean" : dcre_lr_mean, 
+                                  "LR_max" : dcre_lr_max}
 
-    write_dcre(args.output_dcre, results_dict)
+    return results_dict
 
 
 # Render depth map
@@ -136,7 +182,17 @@ def render_depth(mesh, T, K, w, h):
 
     return depth
 
+# def render_depth(osr, T, K, w, h):
+#     osr.setup_camera(K, T, w, h)
 
+#     depth = np.array(osr.render_to_depth_image(True))
+#     depth[np.isinf(depth)] = 0.0
+
+#     return depth
+
+
+# Read the file with pose estimates
+# - <image name> <quaternion> <translation vector>
 def read_est_file(est_file_path):
     f_est = open(est_file_path, 'r')
     data_dict = {}
@@ -160,6 +216,8 @@ def read_est_file(est_file_path):
     return data_dict
 
 
+# Read the intrinsic and extrinsic parameters from a COLMAP model
+# - https://colmap.github.io/format.html#sparse-reconstruction
 def read_colmap_model(model_path):
     colmap_model = pycolmap.Reconstruction(model_path)
     data_dict = {}
@@ -210,7 +268,8 @@ def write_dcre(dcre_path, results_dict):
 # Function for computation of Dense Correspondence Reprojection Error
 # - code originally from: https://github.com/tsattler/visloc_pseudo_gt_limitations/blob/main/evaluation_util.py
 # - depth_mult = 1000 if the depth is stored in mm, 1 if stored in m
-def compute_error_dcre(depth, pgt_pose, est_pose, rgb_focal_length, rgb_image_width, use_max=False, depth_mult=1.0):
+def compute_error_dcre(depth, pgt_pose, est_pose, rgb_focal_length, 
+                       rgb_image_width, use_max=False, depth_mult=1.0):
     '''
     Compute the dense reprojection error.
     Expects poses to map camera coordinate to world coordinates.
@@ -279,13 +338,6 @@ def compute_error_dcre(depth, pgt_pose, est_pose, rgb_focal_length, rgb_image_wi
     # add RGB principal point (assume image center)
     eye_coords[0] += d_w / 2
     eye_coords[1] += d_h / 2
-
-    # reprojection_errors = torch.norm(eye_coords - pixel_coords, p=2, dim=0)
-
-    # if use_max:
-    #     return float(torch.max(reprojection_errors)) / rgb_to_d_scale
-    # else:
-    #     return float(torch.mean(reprojection_errors)) / rgb_to_d_scale
 
     reprojection_errors = np.linalg.norm(eye_coords - pixel_coords, ord=2.0, axis=0)
 
@@ -380,6 +432,57 @@ def valid_depth(depth_map, sample_ratio=0.1):
         return np.sum(depth_map > 0.01) >= (1 / sample_ratio)
     else:
         return np.sum(depth_map > 0.01) > 0
+
+
+# Extract values of specific key from list of dictionaries
+def extract_dict_list(dict_list, key_name):
+    out_list = []
+    for d in dict_list:
+        out_list.append(dict_list[d][key_name])
+
+    return np.array(out_list)
+
+
+# Compute recall at given error threshold
+def compute_recall(errors, thr_list, gt_num):
+    recall_list = []
+    for thr in thr_list:
+        recall_list.append(100 * np.sum(errors <= thr) / gt_num)
+    return recall_list
+
+
+def print_results(ga_mean, ga_max, lr_mean, lr_max, html):
+    print(args.est_file + "\n")
+
+    if html:
+        print("<tr>")
+        print("    <td><a href=\"example.org\">paper link</a></td>")
+        print("    <td><a href=\"example.org\">code link</a></td>")
+        print("    <td class=\"recall_3column\">{:.1f} / {:.1f} / {:.1f}</td>".format(*ga_mean))
+        print("    <td class=\"recall_3column\">{:.1f} / {:.1f} / {:.1f}</td>".format(*ga_max))
+        print("    <td class=\"recall_3column\">{:.1f} / {:.1f} / {:.1f}</td>".format(*lr_mean))
+        print("    <td class=\"recall_3column\">{:.1f} / {:.1f} / {:.1f}</td>".format(*lr_max))
+        print("</tr>")
+    else:
+        print("printing recall at 10%, 20% and 30% of image diagonal length thresholds")
+        print("mean GA: {:.1f} {:.1f} {:.1f}".format(*ga_mean))
+        print("mean GA: {:.1f} {:.1f} {:.1f}".format(*ga_max))
+        print("mean GA: {:.1f} {:.1f} {:.1f}".format(*lr_mean))
+        print("mean GA: {:.1f} {:.1f} {:.1f}".format(*lr_max))
+
+
+def save_html(ga_mean, ga_max, lr_mean, lr_max, html_path):
+    with open(html_path, 'wt') as f:
+        f.write("printing recall at 10%, 20% and 30% of image diagonal length thresholds\n")
+        f.write("<tr>\n")
+        f.write("    <td>method name</td>\n")
+        f.write("    <td><a href=\"example.org\">paper link</a></td>\n")
+        f.write("    <td><a href=\"example.org\">code link</a></td>\n")
+        f.write("    <td class=\"recall_3column\">{:.1f} / {:.1f} / {:.1f}</td>\n".format(*ga_mean))
+        f.write("    <td class=\"recall_3column\">{:.1f} / {:.1f} / {:.1f}</td>\n".format(*ga_max))
+        f.write("    <td class=\"recall_3column\">{:.1f} / {:.1f} / {:.1f}</td>\n".format(*lr_mean))
+        f.write("    <td class=\"recall_3column\">{:.1f} / {:.1f} / {:.1f}</td>\n".format(*lr_max))
+        f.write("</tr>\n")
 
 
 if __name__ == "__main__":

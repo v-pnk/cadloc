@@ -1,0 +1,49 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+Listed results are the recalls at 10 % / 20 % / 30 % DCRE (normalized by query image diagonal).
+<table class="result-table">
+    <tr>
+        <th>method</th>
+        <th>paper</th>
+        <th>code</th>
+        <th>mean GA</th>
+        <th>max. GA</th>
+        <th>mean LR</th>
+        <th>max. LR</th>
+    </tr>
+    <tr>
+        <td>MeshLoc - LoFTR</td>
+        <td><a href="https://arxiv.org/pdf/2207.10762.pdf">arXiv</a></td>
+        <td><a href="https://github.com/tsattler/meshloc_release">GitHub</a></td>
+        <td class="recall_3column">32.4 / 39.4 / 47.4</td>
+        <td class="recall_3column">17.4 / 29.1 / 34.7</td>
+        <td class="recall_3column">22.1 / 37.6 / 46.5</td>
+        <td class="recall_3column">5.2 / 21.6 / 29.1</td>
+    </tr>
+    <tr>
+        <td>MeshLoc - Patch2Pix+SuperGlue</td>
+        <td><a href="https://arxiv.org/pdf/2207.10762.pdf">arXiv</a></td>
+        <td><a href="https://github.com/tsattler/meshloc_release">GitHub</a></td>
+        <td class="recall_3column">28.6 / 34.3 / 45.1</td>
+        <td class="recall_3column">19.2 / 26.3 / 32.4</td>
+        <td class="recall_3column">23.5 / 32.9 / 41.3</td>
+        <td class="recall_3column">5.2 / 21.6 / 28.6</td>
+    </tr>
+    <tr>
+        <td>MeshLoc - SuperGlue</td>
+        <td><a href="https://arxiv.org/pdf/2207.10762.pdf">arXiv</a></td>
+        <td><a href="https://github.com/tsattler/meshloc_release">GitHub</a></td>
+        <td class="recall_3column">28.6 / 37.1 / 47.9</td>
+        <td class="recall_3column">20.7 / 28.6 / 33.8</td>
+        <td class="recall_3column">21.6 / 33.8 / 44.1</td>
+        <td class="recall_3column">6.1 / 21.6 / 30.0</td>
+    </tr>
+</table>
+</body>
+
+</html>
