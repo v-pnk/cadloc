@@ -4,7 +4,7 @@ var xhttp = new XMLHttpRequest();
 xhttp.onreadystatechange = function () {
     if (this.readyState == 4 && this.status == 200) {
         let data = JSON.parse(this.responseText);
-        let update_date = new Date(data.updated_at);
+        let update_date = new Date(data.pushed_at);
         // updateTextCell.textContent = 'last updated: ' + update_date.toISOString();
         let date_text = pad(update_date.getFullYear(), 4);
         date_text = date_text + '-' + pad(update_date.getMonth(), 2);
