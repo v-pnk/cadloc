@@ -25,7 +25,7 @@ pip3 install open3d==0.17 pycolmap==0.3 numpy argparse tqdm
 ```
 
 ## Uploading new benchmark results
-Add your evaluation and metadata files (e.g., my_awesome_method.txt and my_awesome_method.yaml) into the results directory and create pull request.
+Edit [the table corresponding to your results](https://github.com/v-pnk/cadloc/tree/main/docs/tables) and create a pull request.
 
 ## License
 This repository is licensed under the 3-Clause BSD License. See the [LICENSE](https://github.com/v-pnk/cadloc/blob/main/LICENSE) file for full text.
