@@ -7,6 +7,7 @@
     --color-three-hover: #cdb95f;
     --color-four: #0082c7;
     --color-five: #fbf5d9;
+    -webkit-text-size-adjust: none; 
 }
 
 :target {
@@ -32,9 +33,14 @@ body, td, th, tr, p{
     font-size: 14px
 }
 
+html {
+    margin: auto;
+}
+
 body {
     background-color: var(--color-one);
     min-height: 100%;
+    /* position:absolute;    */
 }
 
 h1 {

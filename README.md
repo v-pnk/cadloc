@@ -13,11 +13,11 @@ year={2023}}
 ```
 
 ## Installation
-The evaluation tool needs few Python packages:
+The evaluation tool and rendering script needs few Python packages:
 ```
 conda create --name cadloc python=3.9
 conda activate cadloc
-pip3 install open3d==0.17 pycolmap==0.3 numpy argparse tqdm
+pip3 install open3d==0.17 pycolmap==0.3 numpy argparse tqdm Pillow
 ```
 ## Preparation of data for the benchmark
 [The evaluation script](https://github.com/v-pnk/cadloc/blob/main/evaluate_dcre.py) expects the estimated poses to be stored in the .txt format used by [visuallocalization.net](https://www.visuallocalization.net/), i.e., each line contains an image name and estimated pose described by a quaternion `q` and translation vector `t`:
