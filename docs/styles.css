@@ -86,7 +86,8 @@ th {
     width: 1200px;
     margin-left: auto;
     margin-right: auto;
-    padding: 0;
+    padding-left: 30px;
+    padding-right: 30px;
     border: none;
     position: relative;
     clear: both;
@@ -164,10 +165,24 @@ a.curr-nav:hover li {
 
 
 /* Main scene selection grid */
-.thumbnail {
-    display: inline-block;
+.index-thumbnails {
+    display: grid;
+    margin: auto;
+    grid-template-columns: repeat(auto-fit, 400px);
+    align-items: center;
+    justify-content: center;
+}
+
+.index-thumb-elem {
+    margin: auto;
     width: 400px;
     height: 340px;
+}
+
+.thumbnail {
+    display: inline-block;
+    width: calc(100% - 20px);
+    aspect-ratio: 400 / 340;
     mask-size: cover;
     -webkit-mask-size: cover;
 }
@@ -206,7 +221,7 @@ a.curr-nav:hover li {
 
 /* Thumbnail masks definition */
 .thumbnail-notre-dame {
-    mask: url(images/scene_thumbnails/notre_dame_thumbnail_more_detail_smaller_scale_final_plain_400x340px.svg);
+    mask: url(images/scene_thumbnails/notre_dame_thumbnail_more_detail_smaller_scale_final_plain_400x340px.svg) 0 0 / 100% 100%;
     -webkit-mask: url(images/scene_thumbnails/notre_dame_thumbnail_more_detail_smaller_scale_final_plain_400x340px.svg);
 }
 .thumbnail-pantheon {
@@ -433,4 +448,13 @@ pre button:hover {
     margin: 14px 20px 12px 12px;
     height: 22px;
     text-align: center;
+}
+
+
+@media screen and (max-width: 1260px) {
+    .container {
+        max-width: -webkit-calc(100% - 60px);
+        max-width:    -moz-calc(100% - 660px);
+        max-width:         calc(100% - 60px);
+    }
 }

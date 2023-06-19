@@ -1,4 +1,5 @@
 # Benchmark for visual localization on 3D mesh models
+![Teaser image](teaser.svg)
 Repository for the localization benchmark at [v-pnk.github.io/cadloc](https://v-pnk.github.io/cadloc/). To upload the results to the benchmark, run [the evaluation script](https://github.com/v-pnk/cadloc/blob/main/evaluate_dcre.py) on your pose estimates and create a pull request to add your results into the tables.
 
 ## Citation
