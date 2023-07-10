@@ -40,9 +40,9 @@ from tqdm import tqdm
 
 parser = argparse.ArgumentParser(description="Render images from 3D model")
 parser.add_argument("--model", type=str, required=True,
-    help="Path to the 3D model")
+    help="Path to the 3D mesh model in a format supported by Open3D")
 parser.add_argument("--colmap_model", type=str, required=False,
-    help="Path to the colmap model (for camera defitions) - directory containing images.txt and cameras.txt")
+    help="Path to the colmap model (for camera definitions) - directory containing images.txt and cameras.txt")
 parser.add_argument("--output_dir", type=str, required=True,
     help="Path to the output directory")
 parser.add_argument("--only_black_frames", action="store_true",
@@ -60,9 +60,6 @@ def main(args):
     # Load the mesh
     print('Loading the mesh')
     mesh = o3d.io.read_triangle_model(args.model, True)
-
-    print(mesh.materials[0].absorption_color)
-    print(mesh.materials[0].sRGB_color)
 
     # Load the images
     print('Loading the images and cameras')
@@ -155,8 +152,6 @@ def main(args):
         # #     (far + near - (2.0 * depth - 1.0) * (far - near))
         # # - the same as above, just rewritten
         # depth = near * far / (far - depth * (far - near))
-
-        # depth[depth_zero] = 0.0
 
         depth = np.array(renderer.render_to_depth_image(True))
         depth[np.isinf(depth)] = 0.0
