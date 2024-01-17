@@ -36,6 +36,9 @@ body {
     background-color: var(--color-one);
     width: 100%;
     /* position:fixed; */
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 h1 {
@@ -174,6 +177,7 @@ a.curr-nav:hover li {
 .index-thumbnails {
     display: grid;
     margin: auto;
+    margin-bottom: 24px;
     grid-template-columns: repeat(auto-fit, 400px);
     align-items: center;
     justify-content: center;
@@ -429,6 +433,7 @@ pre button:hover {
     background-color: var(--color-two);
     color: white;
     border-radius: 3px 3px 0 0;
+    margin-top: auto;
 }
 
 .footer a,
