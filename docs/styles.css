@@ -51,14 +51,14 @@ h1 {
 h2 {
     color: var(--color-three);
     /* text-transform: uppercase; */
-    font-size: 18px;
+    font-size: 22px;
     font-weight: 400;
 }
 
 h3 {
     color: var(--color-three);
     /* text-transform: uppercase; */
-    font-size: 16px;
+    font-size: 18px;
     font-weight: 400;
 }
 
@@ -390,7 +390,8 @@ pre button:hover {
 .result-block {
     /* border-style: solid; */
     /* border-width: 2px 0 0 0; */
-    padding: 4px 0 0 0;
+    /* padding: 4px 0 0 0; */
+    margin-bottom: 24px;
     border-color: var(--color-one-hover);
 }
 
@@ -419,7 +420,7 @@ pre button:hover {
 }
 
 .recall_3column {
-    width: 140px;
+    width: 160px;
     text-align:center;
 }
 
