@@ -36,7 +36,7 @@
                             Benchmark
                         </li>
                     </a>
-                    <a class="curr-nav"  href="datasets.html">
+                    <a class="curr-nav" href="datasets.html">
                         <li>
                             Datasets
                         </li>
@@ -54,7 +54,10 @@
     <div id="main">
         <div class="container">
             <p>
-                Below you can find list of all the datasets and models used in the benchmark. Unfortunately we are not able to give you ready-to-use models because of licensing of some of the model sharing websites, so in most cases we share links to the original sources. Note that some models were manually preprocessed before the rendering.
+                Below you can find list of all the datasets and models used in the benchmark. Unfortunately we are not
+                able to give you ready-to-use models because of licensing of some of the model sharing websites, so in
+                most cases we share links to the original sources. Note that some models were manually preprocessed
+                before the rendering.
             </p>
             <ul>
                 <li><a href="#notre-dame">Notre Dame</a></li>
@@ -65,801 +68,1158 @@
             </ul>
 
 
-
             <!-- ### NOTRE DAME ### -->
             <div class="container dataset-block" id="notre-dame">
                 <div class="container">
                     <a href="benchmark_notre_dame.html" class="dataset-thumbnail-cell">
                         <span class="dataset-thumbnail thumbnail-notre-dame"></span>
                     </a>
-                    <div class="dataset-text-cell">
-                        
+                    <div class="dataset-text-cell dataset-text-cell-top">
                         <h2 class="dataset-text">Notre Dame (Paris, France)</h2>
-                        
                         <ul>
-                            <li><b>image data:</b> <a href="https://www.cs.ubc.ca/research/kmyi_data/imw2020/TrainingData/notre_dame_front_facade.tar.gz">Notre Dame Front Facade - part of the IMC PhotoTourism dataset training set</a></li>
-                            <li><b>query image list:</b> <a
-                                    href="https://data.ciirc.cvut.cz/public/projects/2023CADLoc/data/notre_dame/query_list.txt">data repository</a></li>
-                            <li><b>reference image list:</b> <a
-                                    href="https://data.ciirc.cvut.cz/public/projects/2023CADLoc/data/notre_dame/ref_list.txt">data repository</a>
+                            <li><b>image data:</b> <a
+                                    href="https://www.cs.ubc.ca/research/kmyi_data/imw2020/TrainingData/notre_dame_front_facade.tar.gz">Notre
+                                    Dame Front Facade (IMC PhotoTourism)</a></li>
+                            <li><b>splits:</b> <a
+                                    href="https://data.ciirc.cvut.cz/public/projects/2023CADLoc/data/notre_dame/query_list.txt">query</a>
+                                / <a
+                                    href="https://data.ciirc.cvut.cz/public/projects/2023CADLoc/data/notre_dame/ref_list.txt">reference</a>
+                            </li>
+                            <li><b>COLMAP models:</b> <a
+                                    href="https://data.ciirc.cvut.cz/public/projects/2023CADLoc/data/notre_dame/colmap_query.zip">query</a>
+                                / reference is downloaded with the image data
                             </li>
                         </ul>
                     </div>
                 </div>
                 <div class="container">
 
-                <div class="dataset-cell">
-                    <div class="dataset-text-cell dataset-text-cell-scene">
-                        <h3>Reference MVS model</h3>
-                        <ul>
-                            <li><b>link:</b> <a href="https://data.ciirc.cvut.cz/public/projects/2023CADLoc/data/notre_dame/reference_mesh.ply">data repository</a> </li>
-                            <li><b>license:</b> <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a></li>
-                            <li><b>size:</b> 32.3 MB</li>
-                        </ul>
-                    </div>
-                    <table>
-                    <tbody>
-                        <td><img class="dataset-mesh-thumbnail" src="images/mesh_screenshots/notre_dame_de_paris/MVS00.png"></td>
-                        <td><img class="dataset-mesh-thumbnail" src="images/mesh_screenshots/notre_dame_de_paris/MVS01.png"></td>
-                        <td><img class="dataset-mesh-thumbnail" src="images/mesh_screenshots/notre_dame_de_paris/MVS02.png"></td>
-                    </tbody>
-                    </table>
-                </div>
-                <div class="dataset-cell">
-                    <div class="dataset-text-cell dataset-text-cell-scene">
-                        <h3>A (Miguel Bandera)</h3>
-                        <ul>
-                            <li><b>link:</b> <a href="https://skfb.ly/6QWu7">Sketchfab</a></li>
-                            <li><b>author:</b> <a href="https://sketchfab.com/miguelbandera">Miguel Bandera</a></li>
-                            <li><b>license:</b> <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a></li>
-                            <li><b>model type:</b> MVS</li>
-                            <li><b>color type:</b> texture</li>
-                            <li><b>size:</b> 22.4 MB</li>
-                            <li><abbr title="Transformation applied to this model while aligning it with the reference mesh."><b>T<sub>REF</sub>:</b></abbr> <a href="https://data.ciirc.cvut.cz/public/projects/2023CADLoc/data/notre_dame/align_trans/A_miguel_bandera.txt">data repository</a></li>
-                        </ul>
-                    </div>
-                    <table>
-                    <tbody>
-                    <td><img class="dataset-mesh-thumbnail" src="images/mesh_screenshots/notre_dame_de_paris/miguel_bandera00.png"></td>
-                    <td><img class="dataset-mesh-thumbnail" src="images/mesh_screenshots/notre_dame_de_paris/miguel_bandera01.png"></td>
-                    <td><img class="dataset-mesh-thumbnail" src="images/mesh_screenshots/notre_dame_de_paris/miguel_bandera02.png"></td>
-                    </tbody>
-                    </table>
-                </div>
-                <div class="dataset-cell">
-                    <div class="dataset-text-cell dataset-text-cell-scene">
-                        <h3>B (Chigirinsky)</h3>
-                        <ul>
-                            <li><b>link:</b> <a href="https://skfb.ly/6Rn9M">Sketchfab</a></li>
-                            <li><b>authors:</b> <a href="https://3dwarehouse.sketchup.com/user/0194390091341625314737264/Chigirinsky">Chigirinsky</a>, <a href="https://sketchfab.com/copybrian">copybrian</a></li>
-                            <li><b>license:</b> <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY 4.0</a></li>
-                            <li><b>model type:</b> CAD</li>
-                            <li><b>color type:</b> texture</li>
-                            <li><b>size:</b> 4.8 MB</li>
-                            <li><abbr title="T_ref for models exported from DAE format in SketchUp with default parameters."><b>T<sub>REF</sub> (SketchUp):</b></abbr> <a href="https://data.ciirc.cvut.cz/public/projects/2023CADLoc/data/notre_dame/align_trans/B_chigirinsky_sketchup.txt">data repository</a></li>
-                            <li><abbr title="Transformation applied to this model while aligning it with the reference mesh."><b>T<sub>REF</sub>:</b></abbr> <a href="https://data.ciirc.cvut.cz/public/projects/2023CADLoc/data/notre_dame/align_trans/B_chigirinsky.txt">data repository</a></li>
-                        </ul>
-                    </div>
-                    <table>
-                    <tbody>
-                        <td><img class="dataset-mesh-thumbnail" src="images/mesh_screenshots/notre_dame_de_paris/chigirinsky00.png"></td>
-                        <td><img class="dataset-mesh-thumbnail" src="images/mesh_screenshots/notre_dame_de_paris/chigirinsky01.png"></td>
-                        <td><img class="dataset-mesh-thumbnail" src="images/mesh_screenshots/notre_dame_de_paris/chigirinsky02.png"></td>
-                    </tbody>
-                    </table>
-                </div>
-                <div class="dataset-cell">
-                    <div class="dataset-text-cell dataset-text-cell-scene">
-                        <h3>C (Alejandro Diaz)</h3>
-                        <ul>
-                            <li><b>link:</b> <a href="https://skfb.ly/31dba">Sketchfab</a></li>
-                            <li><b>author:</b> <a href="https://3dwarehouse.sketchup.com/user/0032584989901806228404536/Alejandro-Diaz">Alejandro Diaz</a>, <a href="https://sketchfab.com/lowco">agence Lowco</a></li>
-                            <li><b>license:</b> <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY 4.0</a></li>
-                            <li><b>model type:</b> CAD</li>
-                            <li><b>color type:</b> texture</li>
-                            <li><b>size:</b> 3.1 MB</li>
-                            <li><abbr title="Transformation applied to this model while aligning it with the reference mesh."><b>T<sub>REF</sub>:</b></abbr> <a href="https://data.ciirc.cvut.cz/public/projects/2023CADLoc/data/notre_dame/align_trans/C_alejandro_diaz.txt">data repository</a></li>
-                        </ul>
-                    </div>
-                    <table>
-                    <tbody>
-                        <td><img class="dataset-mesh-thumbnail" src="images/mesh_screenshots/notre_dame_de_paris/alejandro_diaz00.png"></td>
-                        <td><img class="dataset-mesh-thumbnail" src="images/mesh_screenshots/notre_dame_de_paris/alejandro_diaz01.png"></td>
-                        <td><img class="dataset-mesh-thumbnail" src="images/mesh_screenshots/notre_dame_de_paris/alejandro_diaz02.png"></td>
-                    </tbody>
-                    </table>
-                </div>
-                <div class="dataset-cell">
-                    <div class="dataset-text-cell dataset-text-cell-scene">
-                        <h3>D (Little-Goomba)</h3>
-                        <ul>
-                            <li><b>link:</b> <a href="https://3dwarehouse.sketchup.com/model/0b21245b-4d8b-4328-b5bd-508c0999c721/Cath%C3%A9drale-Notre-Dame-de-Paris-fixed-normals">3D Warehouse</a> (<a href="https://3dwarehouse.sketchup.com/model/5a301b59181f3c49276d9f0a7a730298/Cath%C3%A9drale-Notre-Dame-de-Paris">original</a>)</li>
-                            <li><b>author:</b> <a href="https://3dwarehouse.sketchup.com/user/1480654136401251132008177/Little-Goomba">Little-Goomba</a></li>
-                            <li><b>license:</b> <a href="https://3dwarehouse.sketchup.com/tos/#license">3DW: GML</a></li>
-                            <li><b>model type:</b> CAD</li>
-                            <li><b>color type:</b> texture</li>
-                            <li><b>size:</b> 0.6 MB</li>
-                            <li><abbr title="Transformation applied to this model while aligning it with the reference mesh."><b>T<sub>REF</sub>:</b></abbr> <a href="https://data.ciirc.cvut.cz/public/projects/2023CADLoc/data/notre_dame/align_trans/D_little_goomba.txt">data repository</a></li>
-                            <li><b>info:</b> We reuploaded the model with fixed face normals.</li>
-                        </ul>
-                    </div>
-                    <table>
-                    <tbody>
-                        <td><img class="dataset-mesh-thumbnail" src="images/mesh_screenshots/notre_dame_de_paris/little_goomba00.png"></td>
-                        <td><img class="dataset-mesh-thumbnail" src="images/mesh_screenshots/notre_dame_de_paris/little_goomba01.png"></td>
-                        <td><img class="dataset-mesh-thumbnail" src="images/mesh_screenshots/notre_dame_de_paris/little_goomba02.png"></td>
-                    </tbody>
-                    </table>
-                </div>
-                <div class="dataset-cell">
-                    <div class="dataset-text-cell dataset-text-cell-scene">
-                        <h3>E (MiniWorld3D)</h3>
-                        <ul>
-                            <li><b>link:</b> <a href="https://www.myminifactory.com/object/3d-print-91899">MyMiniFactory</a></li>
-                            <li><b>author:</b> <a href="https://www.myminifactory.com/users/MiniWorld">MiniWorld3D</a></li>
-                            <li><b>license:</b> <a href="https://mmf.io/o/91899">BY-ND-NC-EX</a></li>
-                            <li><b>model type:</b> CAD</li>
-                            <li><b>color type:</b> raw</li>
-                            <li><b>size:</b> 30.4 MB</li>
-                            <li><abbr title="Transformation applied to this model while aligning it with the reference mesh."><b>T<sub>REF</sub>:</b></abbr> <a href="https://data.ciirc.cvut.cz/public/projects/2023CADLoc/data/notre_dame/align_trans/E_miniworld3d.txt">data repository</a></li>
-                        </ul>
-                    </div>
-                    <table>
-                    <tbody>
-                        <td><img class="dataset-mesh-thumbnail" src="images/mesh_screenshots/notre_dame_de_paris/miniworld3d00.png"></td>
-                        <td><img class="dataset-mesh-thumbnail" src="images/mesh_screenshots/notre_dame_de_paris/miniworld3d01.png"></td>
-                        <td><img class="dataset-mesh-thumbnail" src="images/mesh_screenshots/notre_dame_de_paris/miniworld3d02.png"></td>
-                    </tbody>
-                    </table>
-                </div>
-                <div class="dataset-cell">
-                    <div class="dataset-text-cell dataset-text-cell-scene">
-                        <h3>F (giotis)</h3>
-                        <ul>
-                            <li><b>link:</b> <a href="https://3dwarehouse.sketchup.com/model/afd78307d96242f159aed5538305c915/Notre-Dame-de-Paris?login=true">3D Warehouse</a></li>
-                            <li><b>author:</b> <a href="https://3dwarehouse.sketchup.com/user/1293069794415049200225741/giotis"></a>giotis</li>
-                            <li><b>license:</b> <a href="https://3dwarehouse.sketchup.com/tos/#license">3DW: GML</a></li>
-                            <li><b>model type:</b> CAD</li>
-                            <li><b>color type:</b> raw</li>
-                            <li><b>size:</b> 0.7 MB</li>
-                            <li><abbr title="Transformation applied to this model while aligning it with the reference mesh."><b>T<sub>REF</sub>:</b></abbr> <a href="https://data.ciirc.cvut.cz/public/projects/2023CADLoc/data/notre_dame/align_trans/F_giotis.txt">data repository</a></li>
-                            <li><b>info:</b> Used without the texture due to the issue with face normals.</li>
-                        </ul>
-                    </div>
-                    <table>
-                    <tbody>
-                        <td><img class="dataset-mesh-thumbnail" src="images/mesh_screenshots/notre_dame_de_paris/giotis_nocolor00.png"></td>
-                        <td><img class="dataset-mesh-thumbnail" src="images/mesh_screenshots/notre_dame_de_paris/giotis_nocolor01.png"></td>
-                        <td><img class="dataset-mesh-thumbnail" src="images/mesh_screenshots/notre_dame_de_paris/giotis_nocolor02.png"></td>
-                    </tbody>
-                    </table>
-                </div>
-                <div class="dataset-cell">
-                    <div class="dataset-text-cell dataset-text-cell-scene">
-                        <h3>G (Jul)</h3>
-                        <ul>
-                            <li><b>link:</b> <a href="https://3dwarehouse.sketchup.com/model/68b81bbbe0d59687ab8ac38e0b901491/Notre-Dame-de-Paris">3D Warehouse</a></li>
-                            <li><b>author:</b> <a href="https://3dwarehouse.sketchup.com/user/0463170860321707877410209/Jul">Jul</a></li>
-                            <li><b>license:</b> <a href="https://3dwarehouse.sketchup.com/tos/#license">3DW: GML</a></li>
-                            <li><b>model type:</b> CAD</li>
-                            <li><b>color type:</b> raw</li>
-                            <li><b>size:</b> 0.1 MB</li>
-                            <li><abbr title="Transformation applied to this model while aligning it with the reference mesh."><b>T<sub>REF</sub>:</b></abbr> <a href="https://data.ciirc.cvut.cz/public/projects/2023CADLoc/data/notre_dame/align_trans/G_jul.txt">data repository</a></li>
-                        </ul>
-                    </div>
-                    <table>
-                    <tbody>
-                        <td><img class="dataset-mesh-thumbnail" src="images/mesh_screenshots/notre_dame_de_paris/jul00.png"></td>
-                        <td><img class="dataset-mesh-thumbnail" src="images/mesh_screenshots/notre_dame_de_paris/jul01.png"></td>
-                        <td><img class="dataset-mesh-thumbnail" src="images/mesh_screenshots/notre_dame_de_paris/jul02.png"></td>
-                    </tbody>
-                    </table>
-                </div>
-            </div>
-
-
-            <!-- ### PANTHEON ### -->
-            <div class="container dataset-block" id="pantheon">
-                <div class="container">
-                    <a href="benchmark_pantheon.html" class="dataset-thumbnail-cell">
-                        <span class="dataset-thumbnail thumbnail-pantheon"></span>
-                    </a>
-                    <div class="dataset-text-cell">
-                        <h2 class="dataset-text">Pantheon (Rome, Italy)</h2>
-                        <ul>
-                            <li><b>image data:</b> <a href="https://www.cs.ubc.ca/research/kmyi_data/imw2020/TrainingData/pantheon_exterior.tar.gz">Pantheon Exterior - part of the IMC Phototourism dataset training set</a>
-                            </li>
-                            <li><b>query image list:</b> <a
-                                    href="https://data.ciirc.cvut.cz/public/projects/2023CADLoc/data/pantheon/query_list.txt">data repository</a>
-                            </li>
-                            <li><b>reference image list:</b> <a
-                                    href="https://data.ciirc.cvut.cz/public/projects/2023CADLoc/data/pantheon/ref_list.txt">data repository</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="container">
                     <div class="dataset-cell">
                         <div class="dataset-text-cell dataset-text-cell-scene">
                             <h3>Reference MVS model</h3>
                             <ul>
-                                <li><b>link:</b><a href="https://data.ciirc.cvut.cz/public/projects/2023CADLoc/data/pantheon/reference_mesh.ply">data repository</a></li>
-                                <li><b>license:</b> <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA
+                                <li><b>link:</b> <a
+                                        href="https://data.ciirc.cvut.cz/public/projects/2023CADLoc/data/notre_dame/reference_mesh.ply">data
+                                        repository</a> </li>
+                                <li><b>license:</b> <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC
+                                        BY-NC-SA 4.0</a></li>
+                                <li><b>size:</b> 32.3 MB</li>
+                            </ul>
+                        </div>
+                        <table>
+                            <tbody>
+                                <td><img class="dataset-mesh-thumbnail"
+                                        src="images/mesh_screenshots/notre_dame_de_paris/MVS00.png"></td>
+                                <td><img class="dataset-mesh-thumbnail"
+                                        src="images/mesh_screenshots/notre_dame_de_paris/MVS01.png"></td>
+                                <td><img class="dataset-mesh-thumbnail"
+                                        src="images/mesh_screenshots/notre_dame_de_paris/MVS02.png"></td>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="dataset-cell">
+                        <div class="dataset-text-cell dataset-text-cell-scene">
+                            <h3>A (Miguel Bandera)</h3>
+                            <ul>
+                                <li><b>link:</b> <a href="https://skfb.ly/6QWu7">Sketchfab</a></li>
+                                <li><b>author:</b> <a href="https://sketchfab.com/miguelbandera">Miguel Bandera</a></li>
+                                <li><b>license:</b> <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC
+                                        BY-NC-SA 4.0</a></li>
+                                <li><b>model type:</b> MVS</li>
+                                <li><b>color type:</b> texture</li>
+                                <li><b>size:</b> 22.4 MB</li>
+                                <li><abbr
+                                        title="Transformation applied to this model while aligning it with the reference mesh."><b>T<sub>REF</sub>:</b></abbr>
+                                    <a
+                                        href="https://data.ciirc.cvut.cz/public/projects/2023CADLoc/data/notre_dame/align_trans/A_miguel_bandera.txt">data
+                                        repository</a></li>
+                            </ul>
+                        </div>
+                        <table>
+                            <tbody>
+                                <td><img class="dataset-mesh-thumbnail"
+                                        src="images/mesh_screenshots/notre_dame_de_paris/miguel_bandera00.png"></td>
+                                <td><img class="dataset-mesh-thumbnail"
+                                        src="images/mesh_screenshots/notre_dame_de_paris/miguel_bandera01.png"></td>
+                                <td><img class="dataset-mesh-thumbnail"
+                                        src="images/mesh_screenshots/notre_dame_de_paris/miguel_bandera02.png"></td>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="dataset-cell">
+                        <div class="dataset-text-cell dataset-text-cell-scene">
+                            <h3>B (Chigirinsky)</h3>
+                            <ul>
+                                <li><b>link:</b> <a href="https://skfb.ly/6Rn9M">Sketchfab</a></li>
+                                <li><b>authors:</b> <a
+                                        href="https://3dwarehouse.sketchup.com/user/0194390091341625314737264/Chigirinsky">Chigirinsky</a>,
+                                    <a href="https://sketchfab.com/copybrian">copybrian</a></li>
+                                <li><b>license:</b> <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY
                                         4.0</a></li>
-                                <li><b>size:</b> 71.1 MB</li>
-                            </ul>
-                        </div>
-                        <table>
-                        <tbody>
-                            <td><img class="dataset-mesh-thumbnail" src="images/mesh_screenshots/pantheon/mvs00.png"></td>
-                            <td><img class="dataset-mesh-thumbnail" src="images/mesh_screenshots/pantheon/mvs01.png"></td>
-                            <td><img class="dataset-mesh-thumbnail" src="images/mesh_screenshots/pantheon/mvs02.png"></td>
-                        </tbody>
-                        </table>
-                    </div>
-                    <div class="dataset-cell">
-                        <div class="dataset-text-cell dataset-text-cell-scene">
-                            <h3>A (Fovea)</h3>
-                            <ul>
-                                <li><b>link:</b> <a href="https://skfb.ly/6RZHt">Sketchfab</a></li>
-                                <li><b>author:</b> <a href="https://sketchfab.com/3dfovea">Fovea</a></li>
-                                <li><b>license:</b> <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a></li>
-                                <li><b>model type:</b> MVS</li>
-                                <li><b>color type:</b> texture</li>
-                                <li><b>size:</b> 84.2 MB</li>
-                                <li><abbr title="Transformation applied to this model while aligning it with the reference mesh."><b>T<sub>REF</sub>:</b></abbr> <a href="https://data.ciirc.cvut.cz/public/projects/2023CADLoc/data/pantheon/align_trans/A_fovea.txt">data repository</a></li>
-                            </ul>
-                        </div>
-                        <table>
-                        <tbody>
-                            <td><img class="dataset-mesh-thumbnail" src="images/mesh_screenshots/pantheon/fovea00.png"></td>
-                            <td><img class="dataset-mesh-thumbnail" src="images/mesh_screenshots/pantheon/fovea01.png"></td>
-                            <td><img class="dataset-mesh-thumbnail" src="images/mesh_screenshots/pantheon/fovea02.png"></td>
-                        </tbody>
-                        </table>
-                    </div>
-                    <div class="dataset-cell">
-                        <div class="dataset-text-cell dataset-text-cell-scene">
-                            <h3>B (brnipon)</h3>
-                            <ul>
-                                <li><b>link:</b> <a href="https://3dwarehouse.sketchup.com/model/4f59103b-ec58-4332-a7dd-c1ef5762e619/Pantheon-Santa-Maria-della-Rotonda-Roma-It-fixed-normals">3D Warehouse</a> (<a href="https://3dwarehouse.sketchup.com/model/6bc6136fcb10d7ede8dcb1e1434763b8/Pantheon-Santa-Maria-della-Rotonda-Roma-It">original</a>)</li>
-                                <li><b>author:</b> <a href="https://3dwarehouse.sketchup.com/by/brnipon">brnipon</a></li>
-                                <li><b>license:</b> <a href="https://3dwarehouse.sketchup.com/tos/#license">3DW: GML</a></li>
                                 <li><b>model type:</b> CAD</li>
                                 <li><b>color type:</b> texture</li>
-                                <li><b>size:</b> 5.5 MB</li>
-                                <li><abbr title="Transformation applied to this model while aligning it with the reference mesh."><b>T<sub>REF</sub>:</b></abbr> <a href="https://data.ciirc.cvut.cz/public/projects/2023CADLoc/data/pantheon/align_trans/B_brnipon.txt">data repository</a></li>
+                                <li><b>size:</b> 4.8 MB</li>
+                                <li><abbr
+                                        title="T_ref for models exported from DAE format in SketchUp with default parameters."><b>T<sub>REF</sub>
+                                            (SketchUp):</b></abbr> <a
+                                        href="https://data.ciirc.cvut.cz/public/projects/2023CADLoc/data/notre_dame/align_trans/B_chigirinsky_sketchup.txt">data
+                                        repository</a></li>
+                                <li><abbr
+                                        title="Transformation applied to this model while aligning it with the reference mesh."><b>T<sub>REF</sub>:</b></abbr>
+                                    <a
+                                        href="https://data.ciirc.cvut.cz/public/projects/2023CADLoc/data/notre_dame/align_trans/B_chigirinsky.txt">data
+                                        repository</a></li>
+                            </ul>
+                        </div>
+                        <table>
+                            <tbody>
+                                <td><img class="dataset-mesh-thumbnail"
+                                        src="images/mesh_screenshots/notre_dame_de_paris/chigirinsky00.png"></td>
+                                <td><img class="dataset-mesh-thumbnail"
+                                        src="images/mesh_screenshots/notre_dame_de_paris/chigirinsky01.png"></td>
+                                <td><img class="dataset-mesh-thumbnail"
+                                        src="images/mesh_screenshots/notre_dame_de_paris/chigirinsky02.png"></td>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="dataset-cell">
+                        <div class="dataset-text-cell dataset-text-cell-scene">
+                            <h3>C (Alejandro Diaz)</h3>
+                            <ul>
+                                <li><b>link:</b> <a href="https://skfb.ly/31dba">Sketchfab</a></li>
+                                <li><b>author:</b> <a
+                                        href="https://3dwarehouse.sketchup.com/user/0032584989901806228404536/Alejandro-Diaz">Alejandro
+                                        Diaz</a>, <a href="https://sketchfab.com/lowco">agence Lowco</a></li>
+                                <li><b>license:</b> <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY
+                                        4.0</a></li>
+                                <li><b>model type:</b> CAD</li>
+                                <li><b>color type:</b> texture</li>
+                                <li><b>size:</b> 3.1 MB</li>
+                                <li><abbr
+                                        title="Transformation applied to this model while aligning it with the reference mesh."><b>T<sub>REF</sub>:</b></abbr>
+                                    <a
+                                        href="https://data.ciirc.cvut.cz/public/projects/2023CADLoc/data/notre_dame/align_trans/C_alejandro_diaz.txt">data
+                                        repository</a></li>
+                            </ul>
+                        </div>
+                        <table>
+                            <tbody>
+                                <td><img class="dataset-mesh-thumbnail"
+                                        src="images/mesh_screenshots/notre_dame_de_paris/alejandro_diaz00.png"></td>
+                                <td><img class="dataset-mesh-thumbnail"
+                                        src="images/mesh_screenshots/notre_dame_de_paris/alejandro_diaz01.png"></td>
+                                <td><img class="dataset-mesh-thumbnail"
+                                        src="images/mesh_screenshots/notre_dame_de_paris/alejandro_diaz02.png"></td>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="dataset-cell">
+                        <div class="dataset-text-cell dataset-text-cell-scene">
+                            <h3>D (Little-Goomba)</h3>
+                            <ul>
+                                <li><b>link:</b> <a
+                                        href="https://3dwarehouse.sketchup.com/model/0b21245b-4d8b-4328-b5bd-508c0999c721/Cath%C3%A9drale-Notre-Dame-de-Paris-fixed-normals">3D
+                                        Warehouse</a> (<a
+                                        href="https://3dwarehouse.sketchup.com/model/5a301b59181f3c49276d9f0a7a730298/Cath%C3%A9drale-Notre-Dame-de-Paris">original</a>)
+                                </li>
+                                <li><b>author:</b> <a
+                                        href="https://3dwarehouse.sketchup.com/user/1480654136401251132008177/Little-Goomba">Little-Goomba</a>
+                                </li>
+                                <li><b>license:</b> <a href="https://3dwarehouse.sketchup.com/tos/#license">3DW: GML</a>
+                                </li>
+                                <li><b>model type:</b> CAD</li>
+                                <li><b>color type:</b> texture</li>
+                                <li><b>size:</b> 0.6 MB</li>
+                                <li><abbr
+                                        title="Transformation applied to this model while aligning it with the reference mesh."><b>T<sub>REF</sub>:</b></abbr>
+                                    <a
+                                        href="https://data.ciirc.cvut.cz/public/projects/2023CADLoc/data/notre_dame/align_trans/D_little_goomba.txt">data
+                                        repository</a></li>
                                 <li><b>info:</b> We reuploaded the model with fixed face normals.</li>
                             </ul>
                         </div>
                         <table>
-                        <tbody>
-                            <td><img class="dataset-mesh-thumbnail" src="images/mesh_screenshots/pantheon/brnipon00.png"></td>
-                            <td><img class="dataset-mesh-thumbnail" src="images/mesh_screenshots/pantheon/brnipon01.png"></td>
-                            <td><img class="dataset-mesh-thumbnail" src="images/mesh_screenshots/pantheon/brnipon02.png"></td>
-                        </tbody>
+                            <tbody>
+                                <td><img class="dataset-mesh-thumbnail"
+                                        src="images/mesh_screenshots/notre_dame_de_paris/little_goomba00.png"></td>
+                                <td><img class="dataset-mesh-thumbnail"
+                                        src="images/mesh_screenshots/notre_dame_de_paris/little_goomba01.png"></td>
+                                <td><img class="dataset-mesh-thumbnail"
+                                        src="images/mesh_screenshots/notre_dame_de_paris/little_goomba02.png"></td>
+                            </tbody>
                         </table>
                     </div>
                     <div class="dataset-cell">
                         <div class="dataset-text-cell dataset-text-cell-scene">
-                            <h3>C (Ultima Ratio)</h3>
+                            <h3>E (MiniWorld3D)</h3>
                             <ul>
-                                <li><b>link:</b> <a href="https://3dwarehouse.sketchup.com/model/ueff7b4b8-ab2c-4390-9f7d-b22fe05b3563/Roman-Pantheon">3D Warehouse</a></li>
-                                <li><b>author:</b> <a href="https://3dwarehouse.sketchup.com/user/1054295950314047306921406/Ultima-Ratio">Ultima Ratio</a></li>
-                                <li><b>license:</b> <a href="https://3dwarehouse.sketchup.com/tos/#license">3DW: GML</a></li>
-                                <li><b>model type:</b> CAD</li>
-                                <li><b>color type:</b> texture</li>
-                                <li><b>size:</b> 61.5 MB</li>
-                                <li><abbr title="Transformation applied to this model while aligning it with the reference mesh."><b>T<sub>REF</sub>:</b></abbr> <a href="https://data.ciirc.cvut.cz/public/projects/2023CADLoc/data/pantheon/align_trans/C_ultima_ratio.txt">data repository</a></li>
-                                <li><b>notes:</b> We manually removed the thumbnail image from the 3D model and all color information before rendering.</li>
-                            </ul>
-                        </div>
-                        <table>
-                        <tbody>
-                            <td><img class="dataset-mesh-thumbnail" src="images/mesh_screenshots/pantheon/ultima_ratio00.png"></td>
-                            <td><img class="dataset-mesh-thumbnail" src="images/mesh_screenshots/pantheon/ultima_ratio01.png"></td>
-                            <td><img class="dataset-mesh-thumbnail" src="images/mesh_screenshots/pantheon/ultima_ratio02.png"></td>
-                        </tbody>
-                        </table>
-                    </div>
-                    <div class="dataset-cell">
-                        <div class="dataset-text-cell dataset-text-cell-scene">
-                            <h3>D (Adsman007)</h3>
-                            <ul>
-                                <li><b>link:</b> <a href="https://3dwarehouse.sketchup.com/model/c1c8bd2510cd54d4f6ac7174704571fe/Pantheon">3D Warehouse</a></li>
-                                <li><b>author:</b> <a href="https://3dwarehouse.sketchup.com/user/0872434504875396265464370/Adsman007">Adsman007</a></li>
-                                <li><b>license:</b> <a href="https://3dwarehouse.sketchup.com/tos/#license">3DW: GML</a></li>
+                                <li><b>link:</b> <a
+                                        href="https://www.myminifactory.com/object/3d-print-91899">MyMiniFactory</a>
+                                </li>
+                                <li><b>author:</b> <a
+                                        href="https://www.myminifactory.com/users/MiniWorld">MiniWorld3D</a></li>
+                                <li><b>license:</b> <a href="https://mmf.io/o/91899">BY-ND-NC-EX</a></li>
                                 <li><b>model type:</b> CAD</li>
                                 <li><b>color type:</b> raw</li>
-                                <li><b>size:</b> 24.5 MB</li>
-                                <li><abbr title="Transformation applied to this model while aligning it with the reference mesh."><b>T<sub>REF</sub>:</b></abbr> <a href="https://data.ciirc.cvut.cz/public/projects/2023CADLoc/data/pantheon/align_trans/D_adsman007.txt">data repository</a></li>
-                                <li><b>notes:</b> We removed the model colors to get just raw geometry.</li>
+                                <li><b>size:</b> 30.4 MB</li>
+                                <li><abbr
+                                        title="Transformation applied to this model while aligning it with the reference mesh."><b>T<sub>REF</sub>:</b></abbr>
+                                    <a
+                                        href="https://data.ciirc.cvut.cz/public/projects/2023CADLoc/data/notre_dame/align_trans/E_miniworld3d.txt">data
+                                        repository</a></li>
                             </ul>
                         </div>
                         <table>
-                        <tbody>
-                            <td><img class="dataset-mesh-thumbnail" src="images/mesh_screenshots/pantheon/adsman00700.png"></td>
-                            <td><img class="dataset-mesh-thumbnail" src="images/mesh_screenshots/pantheon/adsman00701.png"></td>
-                            <td><img class="dataset-mesh-thumbnail" src="images/mesh_screenshots/pantheon/adsman00702.png"></td>
-                        </tbody>
+                            <tbody>
+                                <td><img class="dataset-mesh-thumbnail"
+                                        src="images/mesh_screenshots/notre_dame_de_paris/miniworld3d00.png"></td>
+                                <td><img class="dataset-mesh-thumbnail"
+                                        src="images/mesh_screenshots/notre_dame_de_paris/miniworld3d01.png"></td>
+                                <td><img class="dataset-mesh-thumbnail"
+                                        src="images/mesh_screenshots/notre_dame_de_paris/miniworld3d02.png"></td>
+                            </tbody>
                         </table>
                     </div>
                     <div class="dataset-cell">
                         <div class="dataset-text-cell dataset-text-cell-scene">
-                            <h3>E (Emanuele Viani)</h3>
+                            <h3>F (giotis)</h3>
                             <ul>
-                                <li><b>link:</b> <a href="https://skfb.ly/EAKB">Sketchfab</a></li>
-                                <li><b>author:</b> <a href="https://sketchfab.com/emanuele.viani">Emanuele Viani</a></li>
-                                <li><b>license:</b> <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a></li>
-                                <li><b>model type:</b> CAD (voxel)</li>
-                                <li><b>color type:</b> raw</li>
-                                <li><b>size:</b> 36.0 MB</li>
-                                <li><abbr title="Transformation applied to this model while aligning it with the reference mesh."><b>T<sub>REF</sub>:</b></abbr> <a href="https://data.ciirc.cvut.cz/public/projects/2023CADLoc/data/pantheon/align_trans/E_emanuele_viani.txt">data repository</a></li>
-                                <li><b>notes:</b> We removed the model colors to get just raw geometry.</li>
-                            </ul>
-                        </div>
-                        <table>
-                        <tbody>
-                            <td><img class="dataset-mesh-thumbnail" src="images/mesh_screenshots/pantheon/emanuele_viani00.png"></td>
-                            <td><img class="dataset-mesh-thumbnail" src="images/mesh_screenshots/pantheon/emanuele_viani01.png"></td>
-                            <td><img class="dataset-mesh-thumbnail" src="images/mesh_screenshots/pantheon/emanuele_viani02.png"></td>
-                        </tbody>
-                        </table>
-                    </div>
-                </div>
-            </div>
-
-
-
-            <!-- ### REICHSTAG ### -->
-            <div class="container dataset-block" id="reichstag">
-                <div class="container">
-                    <a href="benchmark_reichstag.html" class="dataset-thumbnail-cell">
-                        <span class="dataset-thumbnail thumbnail-reichstag"></span>
-                    </a>
-                    <div class="dataset-text-cell">
-                        <h2 class="dataset-text">Reichstag (Berlin, Germany)</h2>
-                        <ul>
-                            <li><b>image data:</b> <a href="https://www.cs.ubc.ca/research/kmyi_data/imw2020/TrainingData/reichstag.tar.gz">Reichstag - part of the IMC Phototourism dataset validation set</a>
-                            </li>
-                            <li><b>query image list:</b> <a
-                                    href="https://data.ciirc.cvut.cz/public/projects/2023CADLoc/data/reichstag/query_list.txt">data repository</a> - all the images
-                            </li>
-                            <li><b>reference image list:</b> <a
-                                    href="https://data.ciirc.cvut.cz/public/projects/2023CADLoc/data/reichstag/ref_list.txt">data repository</a> - <abbr title="When evaluating a query all the remaining images are used as reference images.">leave one out</abbr>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            
-                <div class="container">
-                    
-                    <div class="dataset-cell">
-                        <div class="dataset-text-cell dataset-text-cell-scene">
-                            <h3>Reference MVS model</h3>
-                            <ul>
-                                <li><b>link:</b> <a href="https://data.ciirc.cvut.cz/public/projects/2023CADLoc/data/reichstag/reference_mesh.ply">data repository</a></li>
-                                <li><b>license:</b> <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a></li>
-                                <li><b>size:</b> 40.5 MB</li>
-                            </ul>
-                        </div>
-                        <table>
-                        <tbody>
-                            <td><img class="dataset-mesh-thumbnail" src="images/mesh_screenshots/reichstag/mvs00.png"></td>
-                            <td><img class="dataset-mesh-thumbnail" src="images/mesh_screenshots/reichstag/mvs01.png"></td>
-                            <td><img class="dataset-mesh-thumbnail" src="images/mesh_screenshots/reichstag/mvs02.png"></td>
-                        </tbody>
-                        </table>
-                    </div>
-                    <div class="dataset-cell">
-                        <div class="dataset-text-cell dataset-text-cell-scene">
-                            <h3>A (EH99 - high LoD)</h3>
-                            <ul>
-                                <li><b>link:</b> <a href="https://3dwarehouse.sketchup.com/model/ecd8d982-d513-47fa-8889-f38892cc5e7c/Reichstag-Berlin-DEM-DEUTSCHEN-VOLK-fixed-normals">3D Warehouse</a> (<a href="https://3dwarehouse.sketchup.com/model/85521eefb0fcdf26b6ecbbb2e4d05900/Reichstag-Berlin-DEM-DEUTSCHEN-VOLK">original</a>)</li>
-                                <li><b>author:</b> <a href="https://3dwarehouse.sketchup.com/user/1660245247513822973835663/Emperor-Heer-99">Emperor Heer 99</a></li>
-                                <li><b>license:</b> <a href="https://3dwarehouse.sketchup.com/tos/#license">3DW: GML</a></li>
-                                <li><b>model type:</b> CAD</li>
-                                <li><b>color type:</b> texture</li>
-                                <li><b>size:</b> 13.3 MB</li>
-                                <li><abbr title="Transformation applied to this model while aligning it with the reference mesh."><b>T<sub>REF</sub>:</b></abbr> <a href="https://data.ciirc.cvut.cz/public/projects/2023CADLoc/data/reichstag/align_trans/A_eh99_high_lod.txt">data repository</a></li>
-                                <li><b>info:</b> We reuploaded the model with fixed face normals.</li>
-                            </ul>
-                        </div>
-                        <table>
-                        <tbody>
-                            <td><img class="dataset-mesh-thumbnail" src="images/mesh_screenshots/reichstag/high00.png"></td>
-                            <td><img class="dataset-mesh-thumbnail" src="images/mesh_screenshots/reichstag/high01.png"></td>
-                            <td><img class="dataset-mesh-thumbnail" src="images/mesh_screenshots/reichstag/high02.png"></td>
-                        </tbody>
-                        </table>
-                    </div>
-                    <div class="dataset-cell">
-                        <div class="dataset-text-cell dataset-text-cell-scene">
-                            <h3>B (EH99 - low LoD)</h3>
-                            <ul>
-                                <li><b>link:</b> <a href="https://3dwarehouse.sketchup.com/model/7bc921e29beb8b9bb6ecbbb2e4d05900/Reichstag">3D Warehouse</a></li>
-                                <li><b>author:</b> <a href="https://3dwarehouse.sketchup.com/user/1660245247513822973835663/Emperor-Heer-99">Emperor Heer 99</a></li>
-                                <li><b>license:</b> <a href="https://3dwarehouse.sketchup.com/tos/#license">3DW: GML</a></li>
-                                <li><b>model type:</b> CAD</li>
-                                <li><b>color type:</b> texture</li>
-                                <li><b>size:</b> 7.5 MB</li>
-                                <li><abbr title="Transformation applied to this model while aligning it with the reference mesh."><b>T<sub>REF</sub>:</b></abbr> <a href="https://data.ciirc.cvut.cz/public/projects/2023CADLoc/data/reichstag/align_trans/B_eh99_low_lod.txt">data repository</a></li>
-                            </ul>
-                        </div>
-                        <table>
-                        <tbody>
-                            <td><img class="dataset-mesh-thumbnail" src="images/mesh_screenshots/reichstag/low00.png"></td>
-                            <td><img class="dataset-mesh-thumbnail" src="images/mesh_screenshots/reichstag/low01.png"></td>
-                            <td><img class="dataset-mesh-thumbnail" src="images/mesh_screenshots/reichstag/low02.png"></td>
-                        </tbody>
-                        </table>
-                    </div>
-                    <div class="dataset-cell">
-                        <div class="dataset-text-cell dataset-text-cell-scene">
-                            <h3>C (EH99 - old high LoD)</h3>
-                            <ul>
-                                <li><b>link:</b> <a href="https://3dwarehouse.sketchup.com/model/ee3c1a4ad1f92145b6ecbbb2e4d05900/Reichstagsgeb%C3%A4ude-Reichstag-Parlament-palace-1894-1945">3D Warehouse</a></li>
-                                <li><b>author:</b> <a href="https://3dwarehouse.sketchup.com/user/1660245247513822973835663/Emperor-Heer-99">Emperor Heer 99</a></li>
-                                <li><b>license:</b> <a href="https://3dwarehouse.sketchup.com/tos/#license">3DW: GML</a></li>
-                                <li><b>model type:</b> CAD</li>
-                                <li><b>color type:</b> texture</li>
-                                <li><b>size:</b> 27.3 MB</li>
-                                <li><abbr title="Transformation applied to this model while aligning it with the reference mesh."><b>T<sub>REF</sub>:</b></abbr> <a href="https://data.ciirc.cvut.cz/public/projects/2023CADLoc/data/reichstag/align_trans/C_eh99_old_high_lod.txt">data repository</a></li>
-                            </ul>
-                        </div>
-                        <table>
-                        <tbody>
-                            <td><img class="dataset-mesh-thumbnail" src="images/mesh_screenshots/reichstag/1894_194500.png"></td>
-                            <td><img class="dataset-mesh-thumbnail" src="images/mesh_screenshots/reichstag/1894_194501.png"></td>
-                            <td><img class="dataset-mesh-thumbnail" src="images/mesh_screenshots/reichstag/1894_194502.png"></td>
-                        </tbody>
-                        </table>
-                    </div>
-                    <div class="dataset-cell">
-                        <div class="dataset-text-cell dataset-text-cell-scene">
-                            <h3>D (EH99 - old low LoD)</h3>
-                            <ul>
-                                <li><b>link:</b> <a href="https://3dwarehouse.sketchup.com/model/9978d5801b90d86bb6ecbbb2e4d05900/Reichstag-Reichstagsgeb%C3%A4ude-1894">3D Warehouse</a></li>
-                                <li><b>author:</b> <a href="https://3dwarehouse.sketchup.com/user/1660245247513822973835663/Emperor-Heer-99">Emperor Heer 99</a></li>
-                                <li><b>license:</b> <a href="https://3dwarehouse.sketchup.com/tos/#license">3DW: GML</a></li>
-                                <li><b>model type:</b> CAD</li>
-                                <li><b>color type:</b> texture</li>
-                                <li><b>size:</b> 6.0 MB</li>
-                                <li><abbr title="Transformation applied to this model while aligning it with the reference mesh."><b>T<sub>REF</sub>:</b></abbr> <a href="https://data.ciirc.cvut.cz/public/projects/2023CADLoc/data/reichstag/align_trans/D_eh99_old_low_lod.txt">data repository</a></li>
-                            </ul>
-                        </div>
-                        <table>
-                        <tbody>
-                            <td><img class="dataset-mesh-thumbnail" src="images/mesh_screenshots/reichstag/189400.png"></td>
-                            <td><img class="dataset-mesh-thumbnail" src="images/mesh_screenshots/reichstag/189401.png"></td>
-                            <td><img class="dataset-mesh-thumbnail" src="images/mesh_screenshots/reichstag/189402.png"></td>
-                        </tbody>
-                        </table>
-                    </div>
-                    <div class="dataset-cell">
-                        <div class="dataset-text-cell dataset-text-cell-scene">
-                            <h3>E (Klaus T.)</h3>
-                            <ul>
-                                <li><b>link:</b> <a href="https://3dwarehouse.sketchup.com/model/f0ce9910-da1a-4fce-9b84-5ed76a9aebe7/Reichstag">3D Warehouse</a></li>
-                                <li><b>author:</b> <a href="https://3dwarehouse.sketchup.com/user/aff1eafc-2f47-4bca-bf11-488345f85dff/Klaus-T">Klaus T.</a></li>
-                                <li><b>license:</b> <a href="https://3dwarehouse.sketchup.com/tos/#license">3DW: GML</a></li>
+                                <li><b>link:</b> <a
+                                        href="https://3dwarehouse.sketchup.com/model/afd78307d96242f159aed5538305c915/Notre-Dame-de-Paris?login=true">3D
+                                        Warehouse</a></li>
+                                <li><b>author:</b> <a
+                                        href="https://3dwarehouse.sketchup.com/user/1293069794415049200225741/giotis"></a>giotis
+                                </li>
+                                <li><b>license:</b> <a href="https://3dwarehouse.sketchup.com/tos/#license">3DW: GML</a>
+                                </li>
                                 <li><b>model type:</b> CAD</li>
                                 <li><b>color type:</b> raw</li>
-                                <li><b>size:</b> 5.3 MB</li>
-                                <li><abbr title="Transformation applied to this model while aligning it with the reference mesh."><b>T<sub>REF</sub>:</b></abbr> <a href="https://data.ciirc.cvut.cz/public/projects/2023CADLoc/data/reichstag/align_trans/E_klaus_t.txt">data repository</a></li>
-                            </ul>
-                        </div>
-                        <table>
-                        <tbody>
-                            <td><img class="dataset-mesh-thumbnail" src="images/mesh_screenshots/reichstag/klaus_t00.png"></td>
-                            <td><img class="dataset-mesh-thumbnail" src="images/mesh_screenshots/reichstag/klaus_t01.png"></td>
-                            <td><img class="dataset-mesh-thumbnail" src="images/mesh_screenshots/reichstag/klaus_t02.png"></td>
-                        </tbody>
-                        </table>
-                    </div>
-                    <div class="dataset-cell">
-                        <div class="dataset-text-cell dataset-text-cell-scene">
-                            <h3>F (SH)</h3>
-                            <ul>
-                                <li><b>link:</b> <a href="https://3dwarehouse.sketchup.com/model/4e0722a64bb38a47ce9ec24c19161b18/Reichstag">3D Warehouse</a></li>
-                                <li><b>author:</b> <a href="https://3dwarehouse.sketchup.com/user/0103251355328256064531027/SH">SH</a></li>
-                                <li><b>license:</b> <a href="https://3dwarehouse.sketchup.com/tos/#license">3DW: GML</a></li>
-                                <li><b>model type:</b> CAD</li>
-                                <li><b>color type:</b> raw</li>
-                                <li><b>size:</b> 0.1 MB</li>
-                                <li><abbr title="Transformation applied to this model while aligning it with the reference mesh."><b>T<sub>REF</sub>:</b></abbr> <a href="https://data.ciirc.cvut.cz/public/projects/2023CADLoc/data/reichstag/align_trans/F_sh.txt">data repository</a></li>
-                                <li><b>notes:</b> We removed the model colors to get just raw geometry.</li>
-                            </ul>
-                        </div>
-                        <table>
-                        <tbody>
-                            <td><img class="dataset-mesh-thumbnail" src="images/mesh_screenshots/reichstag/sh00.png"></td>
-                            <td><img class="dataset-mesh-thumbnail" src="images/mesh_screenshots/reichstag/sh01.png"></td>
-                            <td><img class="dataset-mesh-thumbnail" src="images/mesh_screenshots/reichstag/sh02.png"></td>
-                        </tbody>
-                        </table>
-                    </div>
-                </div>
-            </div>
-
-
-            <!-- ### ST. PETER'S SQUARE ### -->
-            <div class="container dataset-block" id="st-peters-square">
-                <div class="container">
-                    <a href="benchmark_st_peters_square.html" class="dataset-thumbnail-cell">
-                        <span class="dataset-thumbnail thumbnail-st-peters"></span>
-                    </a>
-                    <div class="dataset-text-cell">
-                        <h2 class="dataset-text">St. Peter's Square (Vatican)</h2>
-                        <ul>
-                            <li><b>image data:</b> <a href="https://www.cs.ubc.ca/research/kmyi_data/imw2020/TrainingData/st_peters_square.tar.gz">Saint Peter's Square - part of the IMC Phototourism dataset validation set</a>
-                            </li>
-                            <li><b>query image list:</b> <a
-                                    href="https://data.ciirc.cvut.cz/public/projects/2023CADLoc/data/st_peters_square/query_list.txt">data repository</a>
-                            </li>
-                            <li><b>reference image list:</b> <a
-                                    href="https://data.ciirc.cvut.cz/public/projects/2023CADLoc/data/st_peters_square/ref_list.txt">data repository</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="container">
-                    <div class="dataset-cell">
-                        <div class="dataset-text-cell dataset-text-cell-scene">
-                            <h3>Reference MVS model</h3>
-                            <ul>
-                                <li><b>link:</b> <a href="https://data.ciirc.cvut.cz/public/projects/2023CADLoc/data/st_peters_square/reference_mesh.ply">data repository</a></li>
-                                <li><b>license:</b> <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a></li>
-                                <li><b>size:</b> 68.7 MB</li>
-                            </ul>
-                        </div>
-                        <table>
-                        <tbody>
-                            <td><img class="dataset-mesh-thumbnail" src="images/mesh_screenshots/st_peters_square/mvs00.png"></td>
-                            <td><img class="dataset-mesh-thumbnail" src="images/mesh_screenshots/st_peters_square/mvs01.png"></td>
-                            <td><img class="dataset-mesh-thumbnail" src="images/mesh_screenshots/st_peters_square/mvs02.png"></td>
-                        </tbody>
-                        </table>
-                    </div>
-                    <div class="dataset-cell">
-                        <div class="dataset-text-cell dataset-text-cell-scene">
-                            <h3>A (Brian Trepanier)</h3>
-                            <ul>
-                                <li><b>link:</b> <a href="https://skfb.ly/or8Ip">Sketchfab</a></li>
-                                <li><b>author:</b> <a href="https://sketchfab.com/CMBC">Brian Trepanier</a></li>
-                                <li><b>license:</b> <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a></li>
-                                <li><b>model type:</b> MVS</li>
-                                <li><b>color type:</b> texture</li>
-                                <li><b>size:</b> 230.1 MB</li>
-                                <li><abbr title="Transformation applied to this model while aligning it with the reference mesh."><b>T<sub>REF</sub>:</b></abbr> <a href="https://data.ciirc.cvut.cz/public/projects/2023CADLoc/data/st_peters_square/align_trans/A_brian_trepanier.txt">data repository</a></li>
-                            </ul>
-                        </div>
-                        <table>
-                        <tbody>
-                            <td><img class="dataset-mesh-thumbnail" src="images/mesh_screenshots/st_peters_square/brian_trepanier00.png"></td>
-                            <td><img class="dataset-mesh-thumbnail" src="images/mesh_screenshots/st_peters_square/brian_trepanier01.png"></td>
-                            <td><img class="dataset-mesh-thumbnail" src="images/mesh_screenshots/st_peters_square/brian_trepanier02.png"></td>
-                        </tbody>
-                        </table>
-                    </div>
-                    <div class="dataset-cell">
-                        <div class="dataset-text-cell dataset-text-cell-scene">
-                            <h3>B (Dounia B.)</h3>
-                            <ul>
-                                <li><b>link:</b> <a href="https://3dwarehouse.sketchup.com/model/f84abd0e-0dae-4c81-a21e-dba9c64571ea/Vatican-City">3D Warehouse</a></li>
-                                <li><b>author:</b> <a href="https://3dwarehouse.sketchup.com/user/c0145b4e-305c-4569-b450-5e455da087c9/Dounia-B">Dounia B.</a></li>
-                                <li><b>license:</b> <a href="https://3dwarehouse.sketchup.com/tos/#license">3DW: GML</a></li>
-                                <li><b>model type:</b> CAD</li>
-                                <li><b>color type:</b> texture</li>
-                                <li><b>size:</b> 131.5 MB</li>
-                                <li><abbr title="Transformation applied to this model while aligning it with the reference mesh."><b>T<sub>REF</sub>:</b></abbr> <a href="https://data.ciirc.cvut.cz/public/projects/2023CADLoc/data/st_peters_square/align_trans/B_dounia_b.txt">data repository</a></li>
-                            </ul>
-                        </div>
-                        <table>
-                        <tbody>
-                            <td><img class="dataset-mesh-thumbnail" src="images/mesh_screenshots/st_peters_square/dounia_b00.png"></td>
-                            <td><img class="dataset-mesh-thumbnail" src="images/mesh_screenshots/st_peters_square/dounia_b01.png"></td>
-                            <td><img class="dataset-mesh-thumbnail" src="images/mesh_screenshots/st_peters_square/dounia_b02.png"></td>
-                        </tbody>
-                        </table>
-                    </div>
-                    <div class="dataset-cell">
-                        <div class="dataset-text-cell dataset-text-cell-scene">
-                            <h3>C (mstochl)</h3>
-                            <ul>
-                                <li><b>link:</b> <a href="https://3dwarehouse.sketchup.com/model/272250ddf39b3d6db4967236068080d8/vatican">3D Warehouse</a></li>
-                                <li><b>author:</b> <a href="https://3dwarehouse.sketchup.com/user/0569949805477961641524581/mstochl">mstochl</a></li>
-                                <li><b>license:</b> <a href="https://3dwarehouse.sketchup.com/tos/#license">3DW: GML</a></li>
-                                <li><b>model type:</b> CAD</li>
-                                <li><b>color type:</b> texture</li>
-                                <li><b>size:</b> 4.2 MB</li>
-                                <li><abbr title="Transformation applied to this model while aligning it with the reference mesh."><b>T<sub>REF</sub>:</b></abbr> <a href="https://data.ciirc.cvut.cz/public/projects/2023CADLoc/data/st_peters_square/align_trans/C_mstochl.txt">data repository</a></li>
-                            </ul>
-                        </div>
-                        <table>
-                        <tbody>
-                            <td><img class="dataset-mesh-thumbnail" src="images/mesh_screenshots/st_peters_square/mstochl00.png"></td>
-                            <td><img class="dataset-mesh-thumbnail" src="images/mesh_screenshots/st_peters_square/mstochl01.png"></td>
-                            <td><img class="dataset-mesh-thumbnail" src="images/mesh_screenshots/st_peters_square/mstochl02.png"></td>
-                        </tbody>
-                        </table>
-                    </div>
-                    <div class="dataset-cell">
-                        <div class="dataset-text-cell dataset-text-cell-scene">
-                            <h3>D (Antonino G.)</h3>
-                            <ul>
-                                <li><b>link:</b> <a href="https://3dwarehouse.sketchup.com/model/6950cb7c7504f561c79ba19bb9037a56/Saint-Peters-Basilica-and-Square-in-Vatican-City">3D Warehouse</a></li>
-                                <li><b>author:</b> <a href="https://3dwarehouse.sketchup.com/user/0048887693991075221210291/Antonino-G-Antonino-Grasso-Cristaudo">Antonino Grasso Cristaudo</a></li>
-                                <li><b>license:</b> <a href="https://3dwarehouse.sketchup.com/tos/#license">3DW: GML</a></li>
-                                <li><b>model type:</b> CAD</li>
-                                <li><b>color type:</b> raw</li>
-                                <li><b>size:</b> 24.5 MB</li>
-                                <li><abbr title="Transformation applied to this model while aligning it with the reference mesh."><b>T<sub>REF</sub>:</b></abbr> <a href="https://data.ciirc.cvut.cz/public/projects/2023CADLoc/data/st_peters_square/align_trans/D_antonino_g.txt">data repository</a></li>
+                                <li><b>size:</b> 0.7 MB</li>
+                                <li><abbr
+                                        title="Transformation applied to this model while aligning it with the reference mesh."><b>T<sub>REF</sub>:</b></abbr>
+                                    <a
+                                        href="https://data.ciirc.cvut.cz/public/projects/2023CADLoc/data/notre_dame/align_trans/F_giotis.txt">data
+                                        repository</a></li>
                                 <li><b>info:</b> Used without the texture due to the issue with face normals.</li>
                             </ul>
                         </div>
                         <table>
-                        <tbody>
-                            <td><img class="dataset-mesh-thumbnail" src="images/mesh_screenshots/st_peters_square/antonino_g00.png"></td>
-                            <td><img class="dataset-mesh-thumbnail" src="images/mesh_screenshots/st_peters_square/antonino_g01.png"></td>
-                            <td><img class="dataset-mesh-thumbnail" src="images/mesh_screenshots/st_peters_square/antonino_g02.png"></td>
-                        </tbody>
+                            <tbody>
+                                <td><img class="dataset-mesh-thumbnail"
+                                        src="images/mesh_screenshots/notre_dame_de_paris/giotis_nocolor00.png"></td>
+                                <td><img class="dataset-mesh-thumbnail"
+                                        src="images/mesh_screenshots/notre_dame_de_paris/giotis_nocolor01.png"></td>
+                                <td><img class="dataset-mesh-thumbnail"
+                                        src="images/mesh_screenshots/notre_dame_de_paris/giotis_nocolor02.png"></td>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="dataset-cell">
+                        <div class="dataset-text-cell dataset-text-cell-scene">
+                            <h3>G (Jul)</h3>
+                            <ul>
+                                <li><b>link:</b> <a
+                                        href="https://3dwarehouse.sketchup.com/model/68b81bbbe0d59687ab8ac38e0b901491/Notre-Dame-de-Paris">3D
+                                        Warehouse</a></li>
+                                <li><b>author:</b> <a
+                                        href="https://3dwarehouse.sketchup.com/user/0463170860321707877410209/Jul">Jul</a>
+                                </li>
+                                <li><b>license:</b> <a href="https://3dwarehouse.sketchup.com/tos/#license">3DW: GML</a>
+                                </li>
+                                <li><b>model type:</b> CAD</li>
+                                <li><b>color type:</b> raw</li>
+                                <li><b>size:</b> 0.1 MB</li>
+                                <li><abbr
+                                        title="Transformation applied to this model while aligning it with the reference mesh."><b>T<sub>REF</sub>:</b></abbr>
+                                    <a
+                                        href="https://data.ciirc.cvut.cz/public/projects/2023CADLoc/data/notre_dame/align_trans/G_jul.txt">data
+                                        repository</a></li>
+                            </ul>
+                        </div>
+                        <table>
+                            <tbody>
+                                <td><img class="dataset-mesh-thumbnail"
+                                        src="images/mesh_screenshots/notre_dame_de_paris/jul00.png"></td>
+                                <td><img class="dataset-mesh-thumbnail"
+                                        src="images/mesh_screenshots/notre_dame_de_paris/jul01.png"></td>
+                                <td><img class="dataset-mesh-thumbnail"
+                                        src="images/mesh_screenshots/notre_dame_de_paris/jul02.png"></td>
+                            </tbody>
                         </table>
                     </div>
                 </div>
-            </div>
+                </div>
 
 
-
-            <!-- ### ST. VITUS CATHEDRAL ### -->
-            <div class="container dataset-block" id="st-vitus-cathedral">
-                <div class="container">
-                    <a href="benchmark_st_vitus_cathedral.html" class="dataset-thumbnail-cell">
-                        <span class="dataset-thumbnail thumbnail-st-vitus"></span>
-                    </a>
-                    <div class="dataset-text-cell">
-                        <h2 class="dataset-text">St. Vitus Cathedral (Prague, Czech Republic)</h2>
-                        <ul>
-                            <li><b>image data:</b> <a href="https://data.ciirc.cvut.cz/public/projects/2023CADLoc/data/st_vitus_cathedral/images.zip">data repository</a></li>
-                            <li><b>query image list:</b> <a
-                                    href="https://data.ciirc.cvut.cz/public/projects/2023CADLoc/data/st_vitus_cathedral/query_list.txt">data
-                                    repository</a>
-                            </li>
-                            <li><b>reference image list:</b> <a
-                                    href="https://data.ciirc.cvut.cz/public/projects/2023CADLoc/data/st_vitus_cathedral/ref_list.txt">data
-                                    repository</a>
-                            </li>
-                        </ul>
+                <!-- ### PANTHEON ### -->
+                <div class="container dataset-block" id="pantheon">
+                    <div class="container">
+                        <a href="benchmark_pantheon.html" class="dataset-thumbnail-cell">
+                            <span class="dataset-thumbnail thumbnail-pantheon"></span>
+                        </a>
+                        <div class="dataset-text-cell dataset-text-cell-top">
+                            <h2 class="dataset-text">Pantheon (Rome, Italy)</h2>
+                            <ul>
+                                <li><b>image data:</b> <a
+                                        href="https://www.cs.ubc.ca/research/kmyi_data/imw2020/TrainingData/pantheon_exterior.tar.gz">Pantheon
+                                        Exterior (IMC PhotoTourism)</a>
+                                </li>
+                                <li><b>splits:</b> <a
+                                        href="https://data.ciirc.cvut.cz/public/projects/2023CADLoc/data/pantheon/query_list.txt">query</a>
+                                    / <a
+                                        href="https://data.ciirc.cvut.cz/public/projects/2023CADLoc/data/pantheon/ref_list.txt">reference</a>
+                                </li>
+                                <li><b>COLMAP models:</b> <a
+                                        href="https://data.ciirc.cvut.cz/public/projects/2023CADLoc/data/pantheon/colmap_query.zip">query</a>
+                                    / reference is downloaded with the image data
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="container">
+                        <div class="dataset-cell">
+                            <div class="dataset-text-cell dataset-text-cell-scene">
+                                <h3>Reference MVS model</h3>
+                                <ul>
+                                    <li><b>link:</b><a
+                                            href="https://data.ciirc.cvut.cz/public/projects/2023CADLoc/data/pantheon/reference_mesh.ply">data
+                                            repository</a></li>
+                                    <li><b>license:</b> <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC
+                                            BY-NC-SA
+                                            4.0</a></li>
+                                    <li><b>size:</b> 71.1 MB</li>
+                                </ul>
+                            </div>
+                            <table>
+                                <tbody>
+                                    <td><img class="dataset-mesh-thumbnail"
+                                            src="images/mesh_screenshots/pantheon/mvs00.png"></td>
+                                    <td><img class="dataset-mesh-thumbnail"
+                                            src="images/mesh_screenshots/pantheon/mvs01.png"></td>
+                                    <td><img class="dataset-mesh-thumbnail"
+                                            src="images/mesh_screenshots/pantheon/mvs02.png"></td>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="dataset-cell">
+                            <div class="dataset-text-cell dataset-text-cell-scene">
+                                <h3>A (Fovea)</h3>
+                                <ul>
+                                    <li><b>link:</b> <a href="https://skfb.ly/6RZHt">Sketchfab</a></li>
+                                    <li><b>author:</b> <a href="https://sketchfab.com/3dfovea">Fovea</a></li>
+                                    <li><b>license:</b> <a href="https://creativecommons.org/licenses/by/4.0/">CC BY
+                                            4.0</a></li>
+                                    <li><b>model type:</b> MVS</li>
+                                    <li><b>color type:</b> texture</li>
+                                    <li><b>size:</b> 84.2 MB</li>
+                                    <li><abbr
+                                            title="Transformation applied to this model while aligning it with the reference mesh."><b>T<sub>REF</sub>:</b></abbr>
+                                        <a
+                                            href="https://data.ciirc.cvut.cz/public/projects/2023CADLoc/data/pantheon/align_trans/A_fovea.txt">data
+                                            repository</a></li>
+                                </ul>
+                            </div>
+                            <table>
+                                <tbody>
+                                    <td><img class="dataset-mesh-thumbnail"
+                                            src="images/mesh_screenshots/pantheon/fovea00.png"></td>
+                                    <td><img class="dataset-mesh-thumbnail"
+                                            src="images/mesh_screenshots/pantheon/fovea01.png"></td>
+                                    <td><img class="dataset-mesh-thumbnail"
+                                            src="images/mesh_screenshots/pantheon/fovea02.png"></td>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="dataset-cell">
+                            <div class="dataset-text-cell dataset-text-cell-scene">
+                                <h3>B (brnipon)</h3>
+                                <ul>
+                                    <li><b>link:</b> <a
+                                            href="https://3dwarehouse.sketchup.com/model/4f59103b-ec58-4332-a7dd-c1ef5762e619/Pantheon-Santa-Maria-della-Rotonda-Roma-It-fixed-normals">3D
+                                            Warehouse</a> (<a
+                                            href="https://3dwarehouse.sketchup.com/model/6bc6136fcb10d7ede8dcb1e1434763b8/Pantheon-Santa-Maria-della-Rotonda-Roma-It">original</a>)
+                                    </li>
+                                    <li><b>author:</b> <a href="https://3dwarehouse.sketchup.com/by/brnipon">brnipon</a>
+                                    </li>
+                                    <li><b>license:</b> <a href="https://3dwarehouse.sketchup.com/tos/#license">3DW:
+                                            GML</a></li>
+                                    <li><b>model type:</b> CAD</li>
+                                    <li><b>color type:</b> texture</li>
+                                    <li><b>size:</b> 5.5 MB</li>
+                                    <li><abbr
+                                            title="Transformation applied to this model while aligning it with the reference mesh."><b>T<sub>REF</sub>:</b></abbr>
+                                        <a
+                                            href="https://data.ciirc.cvut.cz/public/projects/2023CADLoc/data/pantheon/align_trans/B_brnipon.txt">data
+                                            repository</a></li>
+                                    <li><b>info:</b> We reuploaded the model with fixed face normals.</li>
+                                </ul>
+                            </div>
+                            <table>
+                                <tbody>
+                                    <td><img class="dataset-mesh-thumbnail"
+                                            src="images/mesh_screenshots/pantheon/brnipon00.png"></td>
+                                    <td><img class="dataset-mesh-thumbnail"
+                                            src="images/mesh_screenshots/pantheon/brnipon01.png"></td>
+                                    <td><img class="dataset-mesh-thumbnail"
+                                            src="images/mesh_screenshots/pantheon/brnipon02.png"></td>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="dataset-cell">
+                            <div class="dataset-text-cell dataset-text-cell-scene">
+                                <h3>C (Ultima Ratio)</h3>
+                                <ul>
+                                    <li><b>link:</b> <a
+                                            href="https://3dwarehouse.sketchup.com/model/ueff7b4b8-ab2c-4390-9f7d-b22fe05b3563/Roman-Pantheon">3D
+                                            Warehouse</a></li>
+                                    <li><b>author:</b> <a
+                                            href="https://3dwarehouse.sketchup.com/user/1054295950314047306921406/Ultima-Ratio">Ultima
+                                            Ratio</a></li>
+                                    <li><b>license:</b> <a href="https://3dwarehouse.sketchup.com/tos/#license">3DW:
+                                            GML</a></li>
+                                    <li><b>model type:</b> CAD</li>
+                                    <li><b>color type:</b> texture</li>
+                                    <li><b>size:</b> 61.5 MB</li>
+                                    <li><abbr
+                                            title="Transformation applied to this model while aligning it with the reference mesh."><b>T<sub>REF</sub>:</b></abbr>
+                                        <a
+                                            href="https://data.ciirc.cvut.cz/public/projects/2023CADLoc/data/pantheon/align_trans/C_ultima_ratio.txt">data
+                                            repository</a></li>
+                                    <li><b>notes:</b> We manually removed the thumbnail image from the 3D model and all
+                                        color information before rendering.</li>
+                                </ul>
+                            </div>
+                            <table>
+                                <tbody>
+                                    <td><img class="dataset-mesh-thumbnail"
+                                            src="images/mesh_screenshots/pantheon/ultima_ratio00.png"></td>
+                                    <td><img class="dataset-mesh-thumbnail"
+                                            src="images/mesh_screenshots/pantheon/ultima_ratio01.png"></td>
+                                    <td><img class="dataset-mesh-thumbnail"
+                                            src="images/mesh_screenshots/pantheon/ultima_ratio02.png"></td>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="dataset-cell">
+                            <div class="dataset-text-cell dataset-text-cell-scene">
+                                <h3>D (Adsman007)</h3>
+                                <ul>
+                                    <li><b>link:</b> <a
+                                            href="https://3dwarehouse.sketchup.com/model/c1c8bd2510cd54d4f6ac7174704571fe/Pantheon">3D
+                                            Warehouse</a></li>
+                                    <li><b>author:</b> <a
+                                            href="https://3dwarehouse.sketchup.com/user/0872434504875396265464370/Adsman007">Adsman007</a>
+                                    </li>
+                                    <li><b>license:</b> <a href="https://3dwarehouse.sketchup.com/tos/#license">3DW:
+                                            GML</a></li>
+                                    <li><b>model type:</b> CAD</li>
+                                    <li><b>color type:</b> raw</li>
+                                    <li><b>size:</b> 24.5 MB</li>
+                                    <li><abbr
+                                            title="Transformation applied to this model while aligning it with the reference mesh."><b>T<sub>REF</sub>:</b></abbr>
+                                        <a
+                                            href="https://data.ciirc.cvut.cz/public/projects/2023CADLoc/data/pantheon/align_trans/D_adsman007.txt">data
+                                            repository</a></li>
+                                    <li><b>notes:</b> We removed the model colors to get just raw geometry.</li>
+                                </ul>
+                            </div>
+                            <table>
+                                <tbody>
+                                    <td><img class="dataset-mesh-thumbnail"
+                                            src="images/mesh_screenshots/pantheon/adsman00700.png"></td>
+                                    <td><img class="dataset-mesh-thumbnail"
+                                            src="images/mesh_screenshots/pantheon/adsman00701.png"></td>
+                                    <td><img class="dataset-mesh-thumbnail"
+                                            src="images/mesh_screenshots/pantheon/adsman00702.png"></td>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="dataset-cell">
+                            <div class="dataset-text-cell dataset-text-cell-scene">
+                                <h3>E (Emanuele Viani)</h3>
+                                <ul>
+                                    <li><b>link:</b> <a href="https://skfb.ly/EAKB">Sketchfab</a></li>
+                                    <li><b>author:</b> <a href="https://sketchfab.com/emanuele.viani">Emanuele Viani</a>
+                                    </li>
+                                    <li><b>license:</b> <a href="https://creativecommons.org/licenses/by/4.0/">CC BY
+                                            4.0</a></li>
+                                    <li><b>model type:</b> CAD (voxel)</li>
+                                    <li><b>color type:</b> raw</li>
+                                    <li><b>size:</b> 36.0 MB</li>
+                                    <li><abbr
+                                            title="Transformation applied to this model while aligning it with the reference mesh."><b>T<sub>REF</sub>:</b></abbr>
+                                        <a
+                                            href="https://data.ciirc.cvut.cz/public/projects/2023CADLoc/data/pantheon/align_trans/E_emanuele_viani.txt">data
+                                            repository</a></li>
+                                    <li><b>notes:</b> We removed the model colors to get just raw geometry.</li>
+                                </ul>
+                            </div>
+                            <table>
+                                <tbody>
+                                    <td><img class="dataset-mesh-thumbnail"
+                                            src="images/mesh_screenshots/pantheon/emanuele_viani00.png"></td>
+                                    <td><img class="dataset-mesh-thumbnail"
+                                            src="images/mesh_screenshots/pantheon/emanuele_viani01.png"></td>
+                                    <td><img class="dataset-mesh-thumbnail"
+                                            src="images/mesh_screenshots/pantheon/emanuele_viani02.png"></td>
+                                </tbody>
+                            </table>
+                        </div>
                     </div>
                 </div>
-                <div class="container">
-                    <div class="dataset-cell">
-                        <div class="dataset-text-cell dataset-text-cell-scene">
-                            <h3>Reference MVS model</h3>
+
+
+
+                <!-- ### REICHSTAG ### -->
+                <div class="container dataset-block" id="reichstag">
+                    <div class="container">
+                        <a href="benchmark_reichstag.html" class="dataset-thumbnail-cell">
+                            <span class="dataset-thumbnail thumbnail-reichstag"></span>
+                        </a>
+                        <div class="dataset-text-cell dataset-text-cell-top">
+                            <h2 class="dataset-text">Reichstag (Berlin, Germany)</h2>
                             <ul>
-                                <li><b>link:</b> <a href="https://data.ciirc.cvut.cz/public/projects/2023CADLoc/data/st_vitus_cathedral/reference_mesh.ply">data repository</a> </li>
-                                <li><b>license:</b> <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA
-                                        4.0</a></li>
-                                <li><b>size:</b> 197.3 MB</li>
+                                <li><b>image data:</b> <a
+                                        href="https://www.cs.ubc.ca/research/kmyi_data/imw2020/TrainingData/reichstag.tar.gz">Reichstag
+                                        (IMC PhotoTourism)</a>
+                                </li>
+                                <li><b>splits:</b> <a
+                                        href="https://data.ciirc.cvut.cz/public/projects/2023CADLoc/data/reichstag/query_list.txt">query</a>
+                                    - all the images / <a
+                                        href="https://data.ciirc.cvut.cz/public/projects/2023CADLoc/data/reichstag/ref_list.txt">reference</a>
+                                    - <abbr
+                                        title="When evaluating a query all the remaining images are used as reference images.">leave
+                                        one out</abbr>
+                                </li>
+                                <li><b>COLMAP models:</b> <a
+                                        href="https://data.ciirc.cvut.cz/public/projects/2023CADLoc/data/reichstag/colmap_query.zip">query</a>
+                                    / reference is downloaded with the image data
+                                </li>
                             </ul>
                         </div>
-                        <table>
-                        <tbody>
-                            <td><img class="dataset-mesh-thumbnail" src="images/mesh_screenshots/st_vitus_cathedral/mvs00.png"></td>
-                            <td><img class="dataset-mesh-thumbnail" src="images/mesh_screenshots/st_vitus_cathedral/mvs01.png"></td>
-                            <td><img class="dataset-mesh-thumbnail" src="images/mesh_screenshots/st_vitus_cathedral/mvs02.png"></td>
-                        </tbody>
-                        </table>
                     </div>
-                    <div class="dataset-cell">
-                        <div class="dataset-text-cell dataset-text-cell-scene">
-                            <h3>A (Brian Trepanier)</h3>
-                            <ul>
-                                <li><b>link:</b> <a href="https://data.ciirc.cvut.cz/public/projects/2023CADLoc/data/st_vitus_cathedral/models/st_vitus_A_brian_trepanier_crop.zip">data repository</a> </li>
-                                <li><b>author:</b> <a href="https://sketchfab.com/CMBC">Brian Trepanier</a></li>
-                                <li><b>license:</b> <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a></li>
-                                <li><b>model type:</b> MVS</li>
-                                <li><b>color type:</b> texture</li>
-                                <li><b>size:</b> 109.4 MB</li>
-                                <li><abbr title="Transformation applied to this model while aligning it with the reference mesh."><b>T<sub>REF</sub>:</b></abbr> <a href="https://data.ciirc.cvut.cz/public/projects/2023CADLoc/data/st_vitus_cathedral/align_trans/A_brian_trepanier_crop.txt">data repository</a></li>
-                                <li><b>info:</b> Model A from the paper is just the cathedral cropped from model B, to make the rendering easier.</li>
-                            </ul>
+
+                    <div class="container">
+
+                        <div class="dataset-cell">
+                            <div class="dataset-text-cell dataset-text-cell-scene">
+                                <h3>Reference MVS model</h3>
+                                <ul>
+                                    <li><b>link:</b> <a
+                                            href="https://data.ciirc.cvut.cz/public/projects/2023CADLoc/data/reichstag/reference_mesh.ply">data
+                                            repository</a></li>
+                                    <li><b>license:</b> <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC
+                                            BY-NC-SA 4.0</a></li>
+                                    <li><b>size:</b> 40.5 MB</li>
+                                </ul>
+                            </div>
+                            <table>
+                                <tbody>
+                                    <td><img class="dataset-mesh-thumbnail"
+                                            src="images/mesh_screenshots/reichstag/mvs00.png"></td>
+                                    <td><img class="dataset-mesh-thumbnail"
+                                            src="images/mesh_screenshots/reichstag/mvs01.png"></td>
+                                    <td><img class="dataset-mesh-thumbnail"
+                                            src="images/mesh_screenshots/reichstag/mvs02.png"></td>
+                                </tbody>
+                            </table>
                         </div>
-                        <table>
-                        <tbody>
-                            <td><img class="dataset-mesh-thumbnail" src="images/mesh_screenshots/st_vitus_cathedral/brian_trepanier_crop00.png"></td>
-                            <td><img class="dataset-mesh-thumbnail" src="images/mesh_screenshots/st_vitus_cathedral/brian_trepanier_crop01.png"></td>
-                            <td><img class="dataset-mesh-thumbnail" src="images/mesh_screenshots/st_vitus_cathedral/brian_trepanier_crop02.png"></td>
-                        </tbody>
-                        </table>
+                        <div class="dataset-cell">
+                            <div class="dataset-text-cell dataset-text-cell-scene">
+                                <h3>A (EH99 - high LoD)</h3>
+                                <ul>
+                                    <li><b>link:</b> <a
+                                            href="https://3dwarehouse.sketchup.com/model/ecd8d982-d513-47fa-8889-f38892cc5e7c/Reichstag-Berlin-DEM-DEUTSCHEN-VOLK-fixed-normals">3D
+                                            Warehouse</a> (<a
+                                            href="https://3dwarehouse.sketchup.com/model/85521eefb0fcdf26b6ecbbb2e4d05900/Reichstag-Berlin-DEM-DEUTSCHEN-VOLK">original</a>)
+                                    </li>
+                                    <li><b>author:</b> <a
+                                            href="https://3dwarehouse.sketchup.com/user/1660245247513822973835663/Emperor-Heer-99">Emperor
+                                            Heer 99</a></li>
+                                    <li><b>license:</b> <a href="https://3dwarehouse.sketchup.com/tos/#license">3DW:
+                                            GML</a></li>
+                                    <li><b>model type:</b> CAD</li>
+                                    <li><b>color type:</b> texture</li>
+                                    <li><b>size:</b> 13.3 MB</li>
+                                    <li><abbr
+                                            title="Transformation applied to this model while aligning it with the reference mesh."><b>T<sub>REF</sub>:</b></abbr>
+                                        <a
+                                            href="https://data.ciirc.cvut.cz/public/projects/2023CADLoc/data/reichstag/align_trans/A_eh99_high_lod.txt">data
+                                            repository</a></li>
+                                    <li><b>info:</b> We reuploaded the model with fixed face normals.</li>
+                                </ul>
+                            </div>
+                            <table>
+                                <tbody>
+                                    <td><img class="dataset-mesh-thumbnail"
+                                            src="images/mesh_screenshots/reichstag/high00.png"></td>
+                                    <td><img class="dataset-mesh-thumbnail"
+                                            src="images/mesh_screenshots/reichstag/high01.png"></td>
+                                    <td><img class="dataset-mesh-thumbnail"
+                                            src="images/mesh_screenshots/reichstag/high02.png"></td>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="dataset-cell">
+                            <div class="dataset-text-cell dataset-text-cell-scene">
+                                <h3>B (EH99 - low LoD)</h3>
+                                <ul>
+                                    <li><b>link:</b> <a
+                                            href="https://3dwarehouse.sketchup.com/model/7bc921e29beb8b9bb6ecbbb2e4d05900/Reichstag">3D
+                                            Warehouse</a></li>
+                                    <li><b>author:</b> <a
+                                            href="https://3dwarehouse.sketchup.com/user/1660245247513822973835663/Emperor-Heer-99">Emperor
+                                            Heer 99</a></li>
+                                    <li><b>license:</b> <a href="https://3dwarehouse.sketchup.com/tos/#license">3DW:
+                                            GML</a></li>
+                                    <li><b>model type:</b> CAD</li>
+                                    <li><b>color type:</b> texture</li>
+                                    <li><b>size:</b> 7.5 MB</li>
+                                    <li><abbr
+                                            title="Transformation applied to this model while aligning it with the reference mesh."><b>T<sub>REF</sub>:</b></abbr>
+                                        <a
+                                            href="https://data.ciirc.cvut.cz/public/projects/2023CADLoc/data/reichstag/align_trans/B_eh99_low_lod.txt">data
+                                            repository</a></li>
+                                </ul>
+                            </div>
+                            <table>
+                                <tbody>
+                                    <td><img class="dataset-mesh-thumbnail"
+                                            src="images/mesh_screenshots/reichstag/low00.png"></td>
+                                    <td><img class="dataset-mesh-thumbnail"
+                                            src="images/mesh_screenshots/reichstag/low01.png"></td>
+                                    <td><img class="dataset-mesh-thumbnail"
+                                            src="images/mesh_screenshots/reichstag/low02.png"></td>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="dataset-cell">
+                            <div class="dataset-text-cell dataset-text-cell-scene">
+                                <h3>C (EH99 - old high LoD)</h3>
+                                <ul>
+                                    <li><b>link:</b> <a
+                                            href="https://3dwarehouse.sketchup.com/model/ee3c1a4ad1f92145b6ecbbb2e4d05900/Reichstagsgeb%C3%A4ude-Reichstag-Parlament-palace-1894-1945">3D
+                                            Warehouse</a></li>
+                                    <li><b>author:</b> <a
+                                            href="https://3dwarehouse.sketchup.com/user/1660245247513822973835663/Emperor-Heer-99">Emperor
+                                            Heer 99</a></li>
+                                    <li><b>license:</b> <a href="https://3dwarehouse.sketchup.com/tos/#license">3DW:
+                                            GML</a></li>
+                                    <li><b>model type:</b> CAD</li>
+                                    <li><b>color type:</b> texture</li>
+                                    <li><b>size:</b> 27.3 MB</li>
+                                    <li><abbr
+                                            title="Transformation applied to this model while aligning it with the reference mesh."><b>T<sub>REF</sub>:</b></abbr>
+                                        <a
+                                            href="https://data.ciirc.cvut.cz/public/projects/2023CADLoc/data/reichstag/align_trans/C_eh99_old_high_lod.txt">data
+                                            repository</a></li>
+                                </ul>
+                            </div>
+                            <table>
+                                <tbody>
+                                    <td><img class="dataset-mesh-thumbnail"
+                                            src="images/mesh_screenshots/reichstag/1894_194500.png"></td>
+                                    <td><img class="dataset-mesh-thumbnail"
+                                            src="images/mesh_screenshots/reichstag/1894_194501.png"></td>
+                                    <td><img class="dataset-mesh-thumbnail"
+                                            src="images/mesh_screenshots/reichstag/1894_194502.png"></td>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="dataset-cell">
+                            <div class="dataset-text-cell dataset-text-cell-scene">
+                                <h3>D (EH99 - old low LoD)</h3>
+                                <ul>
+                                    <li><b>link:</b> <a
+                                            href="https://3dwarehouse.sketchup.com/model/9978d5801b90d86bb6ecbbb2e4d05900/Reichstag-Reichstagsgeb%C3%A4ude-1894">3D
+                                            Warehouse</a></li>
+                                    <li><b>author:</b> <a
+                                            href="https://3dwarehouse.sketchup.com/user/1660245247513822973835663/Emperor-Heer-99">Emperor
+                                            Heer 99</a></li>
+                                    <li><b>license:</b> <a href="https://3dwarehouse.sketchup.com/tos/#license">3DW:
+                                            GML</a></li>
+                                    <li><b>model type:</b> CAD</li>
+                                    <li><b>color type:</b> texture</li>
+                                    <li><b>size:</b> 6.0 MB</li>
+                                    <li><abbr
+                                            title="Transformation applied to this model while aligning it with the reference mesh."><b>T<sub>REF</sub>:</b></abbr>
+                                        <a
+                                            href="https://data.ciirc.cvut.cz/public/projects/2023CADLoc/data/reichstag/align_trans/D_eh99_old_low_lod.txt">data
+                                            repository</a></li>
+                                </ul>
+                            </div>
+                            <table>
+                                <tbody>
+                                    <td><img class="dataset-mesh-thumbnail"
+                                            src="images/mesh_screenshots/reichstag/189400.png"></td>
+                                    <td><img class="dataset-mesh-thumbnail"
+                                            src="images/mesh_screenshots/reichstag/189401.png"></td>
+                                    <td><img class="dataset-mesh-thumbnail"
+                                            src="images/mesh_screenshots/reichstag/189402.png"></td>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="dataset-cell">
+                            <div class="dataset-text-cell dataset-text-cell-scene">
+                                <h3>E (Klaus T.)</h3>
+                                <ul>
+                                    <li><b>link:</b> <a
+                                            href="https://3dwarehouse.sketchup.com/model/f0ce9910-da1a-4fce-9b84-5ed76a9aebe7/Reichstag">3D
+                                            Warehouse</a></li>
+                                    <li><b>author:</b> <a
+                                            href="https://3dwarehouse.sketchup.com/user/aff1eafc-2f47-4bca-bf11-488345f85dff/Klaus-T">Klaus
+                                            T.</a></li>
+                                    <li><b>license:</b> <a href="https://3dwarehouse.sketchup.com/tos/#license">3DW:
+                                            GML</a></li>
+                                    <li><b>model type:</b> CAD</li>
+                                    <li><b>color type:</b> raw</li>
+                                    <li><b>size:</b> 5.3 MB</li>
+                                    <li><abbr
+                                            title="Transformation applied to this model while aligning it with the reference mesh."><b>T<sub>REF</sub>:</b></abbr>
+                                        <a
+                                            href="https://data.ciirc.cvut.cz/public/projects/2023CADLoc/data/reichstag/align_trans/E_klaus_t.txt">data
+                                            repository</a></li>
+                                </ul>
+                            </div>
+                            <table>
+                                <tbody>
+                                    <td><img class="dataset-mesh-thumbnail"
+                                            src="images/mesh_screenshots/reichstag/klaus_t00.png"></td>
+                                    <td><img class="dataset-mesh-thumbnail"
+                                            src="images/mesh_screenshots/reichstag/klaus_t01.png"></td>
+                                    <td><img class="dataset-mesh-thumbnail"
+                                            src="images/mesh_screenshots/reichstag/klaus_t02.png"></td>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="dataset-cell">
+                            <div class="dataset-text-cell dataset-text-cell-scene">
+                                <h3>F (SH)</h3>
+                                <ul>
+                                    <li><b>link:</b> <a
+                                            href="https://3dwarehouse.sketchup.com/model/4e0722a64bb38a47ce9ec24c19161b18/Reichstag">3D
+                                            Warehouse</a></li>
+                                    <li><b>author:</b> <a
+                                            href="https://3dwarehouse.sketchup.com/user/0103251355328256064531027/SH">SH</a>
+                                    </li>
+                                    <li><b>license:</b> <a href="https://3dwarehouse.sketchup.com/tos/#license">3DW:
+                                            GML</a></li>
+                                    <li><b>model type:</b> CAD</li>
+                                    <li><b>color type:</b> raw</li>
+                                    <li><b>size:</b> 0.1 MB</li>
+                                    <li><abbr
+                                            title="Transformation applied to this model while aligning it with the reference mesh."><b>T<sub>REF</sub>:</b></abbr>
+                                        <a
+                                            href="https://data.ciirc.cvut.cz/public/projects/2023CADLoc/data/reichstag/align_trans/F_sh.txt">data
+                                            repository</a></li>
+                                    <li><b>notes:</b> We removed the model colors to get just raw geometry.</li>
+                                </ul>
+                            </div>
+                            <table>
+                                <tbody>
+                                    <td><img class="dataset-mesh-thumbnail"
+                                            src="images/mesh_screenshots/reichstag/sh00.png"></td>
+                                    <td><img class="dataset-mesh-thumbnail"
+                                            src="images/mesh_screenshots/reichstag/sh01.png"></td>
+                                    <td><img class="dataset-mesh-thumbnail"
+                                            src="images/mesh_screenshots/reichstag/sh02.png"></td>
+                                </tbody>
+                            </table>
+                        </div>
                     </div>
-                    <div class="dataset-cell">
-                        <div class="dataset-text-cell dataset-text-cell-scene">
-                            <h3>B (Brian Trepanier)</h3>
+                </div>
+
+
+                <!-- ### ST. PETER'S SQUARE ### -->
+                <div class="container dataset-block" id="st-peters-square">
+                    <div class="container">
+                        <a href="benchmark_st_peters_square.html" class="dataset-thumbnail-cell">
+                            <span class="dataset-thumbnail thumbnail-st-peters"></span>
+                        </a>
+                        <div class="dataset-text-cell dataset-text-cell-top">
+                            <h2 class="dataset-text">St. Peter's Square (Vatican)</h2>
                             <ul>
-                                <li><b>link:</b> <a href="https://skfb.ly/o8n8D">Sketchfab</a></li>
-                                <li><b>author:</b> <a href="https://sketchfab.com/CMBC">Brian Trepanier</a></li>
-                                <li><b>license:</b> <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a></li>
-                                <li><b>model type:</b> MVS</li>
-                                <li><b>color type:</b> texture</li>
-                                <li><b>size:</b> 284.9 MB</li>
-                                <li><abbr title="Transformation applied to this model while aligning it with the reference mesh."><b>T<sub>REF</sub>:</b></abbr> <a href="https://data.ciirc.cvut.cz/public/projects/2023CADLoc/data/st_vitus_cathedral/align_trans/B_brian_trepanier_full.txt">data repository</a></li>
+                                <li><b>image data:</b> <a
+                                        href="https://www.cs.ubc.ca/research/kmyi_data/imw2020/TrainingData/st_peters_square.tar.gz">Saint
+                                        Peter's Square (IMC PhotoTourism)</a>
+                                </li>
+                                <li><b>splits:</b> <a
+                                        href="https://data.ciirc.cvut.cz/public/projects/2023CADLoc/data/st_peters_square/query_list.txt">query</a>
+                                    / <a
+                                        href="https://data.ciirc.cvut.cz/public/projects/2023CADLoc/data/st_peters_square/ref_list.txt">reference</a>
+                                </li>
+                                <li><b>COLMAP models:</b> <a
+                                        href="https://data.ciirc.cvut.cz/public/projects/2023CADLoc/data/st_peters_square/colmap_query.zip">query</a>
+                                    / reference is downloaded with the image data
+                                </li>
                             </ul>
                         </div>
-                        <table>
-                        <tbody>
-                            <td><img class="dataset-mesh-thumbnail" src="images/mesh_screenshots/st_vitus_cathedral/brian_trepanier00.png"></td>
-                            <td><img class="dataset-mesh-thumbnail" src="images/mesh_screenshots/st_vitus_cathedral/brian_trepanier01.png"></td>
-                            <td><img class="dataset-mesh-thumbnail" src="images/mesh_screenshots/st_vitus_cathedral/brian_trepanier02.png"></td>
-                        </tbody>
-                        </table>
                     </div>
-                    <div class="dataset-cell">
-                        <div class="dataset-text-cell dataset-text-cell-scene">
-                            <h3>C (Pera)</h3>
-                            <ul>
-                                <li><b>link:</b> <a href="https://3dwarehouse.sketchup.com/model/21f43816-06c6-4b7a-a477-1d052aa76ddd/StVitus-Cathedral-fixed-normals">3D Warehouse</a> (<a href="https://3dwarehouse.sketchup.com/model/2b4edabc82da05f41adfc303e9e33d06/StVitus-Cathedral">original</a>)</li>
-                                <li><b>author:</b> <a href="https://3dwarehouse.sketchup.com/user/1094908963092441562210615/%D0%9F%D0%B5%D1%80%D0%B0">Pera</a></li>
-                                <li><b>license:</b> <a href="https://3dwarehouse.sketchup.com/tos/#license">3DW: GML</a></li>
-                                <li><b>model type:</b> CAD</li>
-                                <li><b>color type:</b> texture</li>
-                                <li><b>size:</b> 3.7 MB</li>
-                                <li><abbr title="Transformation applied to this model while aligning it with the reference mesh."><b>T<sub>REF</sub>:</b></abbr> <a href="https://data.ciirc.cvut.cz/public/projects/2023CADLoc/data/st_vitus_cathedral/align_trans/C_pera.txt">data repository</a></li>
-                                <li><b>info:</b> We reuploaded the model with fixed face normals.</li>
-                            </ul>
+                    <div class="container">
+                        <div class="dataset-cell">
+                            <div class="dataset-text-cell dataset-text-cell-scene">
+                                <h3>Reference MVS model</h3>
+                                <ul>
+                                    <li><b>link:</b> <a
+                                            href="https://data.ciirc.cvut.cz/public/projects/2023CADLoc/data/st_peters_square/reference_mesh.ply">data
+                                            repository</a></li>
+                                    <li><b>license:</b> <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC
+                                            BY-NC-SA 4.0</a></li>
+                                    <li><b>size:</b> 68.7 MB</li>
+                                </ul>
+                            </div>
+                            <table>
+                                <tbody>
+                                    <td><img class="dataset-mesh-thumbnail"
+                                            src="images/mesh_screenshots/st_peters_square/mvs00.png"></td>
+                                    <td><img class="dataset-mesh-thumbnail"
+                                            src="images/mesh_screenshots/st_peters_square/mvs01.png"></td>
+                                    <td><img class="dataset-mesh-thumbnail"
+                                            src="images/mesh_screenshots/st_peters_square/mvs02.png"></td>
+                                </tbody>
+                            </table>
                         </div>
-                        <table>
-                        <tbody>
-                            <td><img class="dataset-mesh-thumbnail" src="images/mesh_screenshots/st_vitus_cathedral/pera00.png"></td>
-                            <td><img class="dataset-mesh-thumbnail" src="images/mesh_screenshots/st_vitus_cathedral/pera01.png"></td>
-                            <td><img class="dataset-mesh-thumbnail" src="images/mesh_screenshots/st_vitus_cathedral/pera02.png"></td>
-                        </tbody>
-                        </table>
+                        <div class="dataset-cell">
+                            <div class="dataset-text-cell dataset-text-cell-scene">
+                                <h3>A (Brian Trepanier)</h3>
+                                <ul>
+                                    <li><b>link:</b> <a href="https://skfb.ly/or8Ip">Sketchfab</a></li>
+                                    <li><b>author:</b> <a href="https://sketchfab.com/CMBC">Brian Trepanier</a></li>
+                                    <li><b>license:</b> <a href="https://creativecommons.org/licenses/by/4.0/">CC BY
+                                            4.0</a></li>
+                                    <li><b>model type:</b> MVS</li>
+                                    <li><b>color type:</b> texture</li>
+                                    <li><b>size:</b> 230.1 MB</li>
+                                    <li><abbr
+                                            title="Transformation applied to this model while aligning it with the reference mesh."><b>T<sub>REF</sub>:</b></abbr>
+                                        <a
+                                            href="https://data.ciirc.cvut.cz/public/projects/2023CADLoc/data/st_peters_square/align_trans/A_brian_trepanier.txt">data
+                                            repository</a></li>
+                                </ul>
+                            </div>
+                            <table>
+                                <tbody>
+                                    <td><img class="dataset-mesh-thumbnail"
+                                            src="images/mesh_screenshots/st_peters_square/brian_trepanier00.png"></td>
+                                    <td><img class="dataset-mesh-thumbnail"
+                                            src="images/mesh_screenshots/st_peters_square/brian_trepanier01.png"></td>
+                                    <td><img class="dataset-mesh-thumbnail"
+                                            src="images/mesh_screenshots/st_peters_square/brian_trepanier02.png"></td>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="dataset-cell">
+                            <div class="dataset-text-cell dataset-text-cell-scene">
+                                <h3>B (Dounia B.)</h3>
+                                <ul>
+                                    <li><b>link:</b> <a
+                                            href="https://3dwarehouse.sketchup.com/model/f84abd0e-0dae-4c81-a21e-dba9c64571ea/Vatican-City">3D
+                                            Warehouse</a></li>
+                                    <li><b>author:</b> <a
+                                            href="https://3dwarehouse.sketchup.com/user/c0145b4e-305c-4569-b450-5e455da087c9/Dounia-B">Dounia
+                                            B.</a></li>
+                                    <li><b>license:</b> <a href="https://3dwarehouse.sketchup.com/tos/#license">3DW:
+                                            GML</a></li>
+                                    <li><b>model type:</b> CAD</li>
+                                    <li><b>color type:</b> texture</li>
+                                    <li><b>size:</b> 131.5 MB</li>
+                                    <li><abbr
+                                            title="Transformation applied to this model while aligning it with the reference mesh."><b>T<sub>REF</sub>:</b></abbr>
+                                        <a
+                                            href="https://data.ciirc.cvut.cz/public/projects/2023CADLoc/data/st_peters_square/align_trans/B_dounia_b.txt">data
+                                            repository</a></li>
+                                </ul>
+                            </div>
+                            <table>
+                                <tbody>
+                                    <td><img class="dataset-mesh-thumbnail"
+                                            src="images/mesh_screenshots/st_peters_square/dounia_b00.png"></td>
+                                    <td><img class="dataset-mesh-thumbnail"
+                                            src="images/mesh_screenshots/st_peters_square/dounia_b01.png"></td>
+                                    <td><img class="dataset-mesh-thumbnail"
+                                            src="images/mesh_screenshots/st_peters_square/dounia_b02.png"></td>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="dataset-cell">
+                            <div class="dataset-text-cell dataset-text-cell-scene">
+                                <h3>C (mstochl)</h3>
+                                <ul>
+                                    <li><b>link:</b> <a
+                                            href="https://3dwarehouse.sketchup.com/model/272250ddf39b3d6db4967236068080d8/vatican">3D
+                                            Warehouse</a></li>
+                                    <li><b>author:</b> <a
+                                            href="https://3dwarehouse.sketchup.com/user/0569949805477961641524581/mstochl">mstochl</a>
+                                    </li>
+                                    <li><b>license:</b> <a href="https://3dwarehouse.sketchup.com/tos/#license">3DW:
+                                            GML</a></li>
+                                    <li><b>model type:</b> CAD</li>
+                                    <li><b>color type:</b> texture</li>
+                                    <li><b>size:</b> 4.2 MB</li>
+                                    <li><abbr
+                                            title="Transformation applied to this model while aligning it with the reference mesh."><b>T<sub>REF</sub>:</b></abbr>
+                                        <a
+                                            href="https://data.ciirc.cvut.cz/public/projects/2023CADLoc/data/st_peters_square/align_trans/C_mstochl.txt">data
+                                            repository</a></li>
+                                </ul>
+                            </div>
+                            <table>
+                                <tbody>
+                                    <td><img class="dataset-mesh-thumbnail"
+                                            src="images/mesh_screenshots/st_peters_square/mstochl00.png"></td>
+                                    <td><img class="dataset-mesh-thumbnail"
+                                            src="images/mesh_screenshots/st_peters_square/mstochl01.png"></td>
+                                    <td><img class="dataset-mesh-thumbnail"
+                                            src="images/mesh_screenshots/st_peters_square/mstochl02.png"></td>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="dataset-cell">
+                            <div class="dataset-text-cell dataset-text-cell-scene">
+                                <h3>D (Antonino G.)</h3>
+                                <ul>
+                                    <li><b>link:</b> <a
+                                            href="https://3dwarehouse.sketchup.com/model/6950cb7c7504f561c79ba19bb9037a56/Saint-Peters-Basilica-and-Square-in-Vatican-City">3D
+                                            Warehouse</a></li>
+                                    <li><b>author:</b> <a
+                                            href="https://3dwarehouse.sketchup.com/user/0048887693991075221210291/Antonino-G-Antonino-Grasso-Cristaudo">Antonino
+                                            Grasso Cristaudo</a></li>
+                                    <li><b>license:</b> <a href="https://3dwarehouse.sketchup.com/tos/#license">3DW:
+                                            GML</a></li>
+                                    <li><b>model type:</b> CAD</li>
+                                    <li><b>color type:</b> raw</li>
+                                    <li><b>size:</b> 24.5 MB</li>
+                                    <li><abbr
+                                            title="Transformation applied to this model while aligning it with the reference mesh."><b>T<sub>REF</sub>:</b></abbr>
+                                        <a
+                                            href="https://data.ciirc.cvut.cz/public/projects/2023CADLoc/data/st_peters_square/align_trans/D_antonino_g.txt">data
+                                            repository</a></li>
+                                    <li><b>info:</b> Used without the texture due to the issue with face normals.</li>
+                                </ul>
+                            </div>
+                            <table>
+                                <tbody>
+                                    <td><img class="dataset-mesh-thumbnail"
+                                            src="images/mesh_screenshots/st_peters_square/antonino_g00.png"></td>
+                                    <td><img class="dataset-mesh-thumbnail"
+                                            src="images/mesh_screenshots/st_peters_square/antonino_g01.png"></td>
+                                    <td><img class="dataset-mesh-thumbnail"
+                                            src="images/mesh_screenshots/st_peters_square/antonino_g02.png"></td>
+                                </tbody>
+                            </table>
+                        </div>
                     </div>
-                    <div class="dataset-cell">
-                        <div class="dataset-text-cell dataset-text-cell-scene">
-                            <h3>D (Hrusak)</h3>
+                </div>
+
+
+
+                <!-- ### ST. VITUS CATHEDRAL ### -->
+                <div class="container dataset-block" id="st-vitus-cathedral">
+                    <div class="container">
+                        <a href="benchmark_st_vitus_cathedral.html" class="dataset-thumbnail-cell">
+                            <span class="dataset-thumbnail thumbnail-st-vitus"></span>
+                        </a>
+                        <div class="dataset-text-cell dataset-text-cell-top">
+                            <h2 class="dataset-text">St. Vitus Cathedral (Prague, Czech Republic)</h2>
                             <ul>
-                                <li><b>link:</b> <a href="https://3dwarehouse.sketchup.com/model/6786e4700478dfd83f8fc8dcc50fb74/Prague-Castle-St-Vitus-Cathedral">3D Warehouse</a></li>
-                                <li><b>author:</b> <a href="https://3dwarehouse.sketchup.com/user/1158766977984783910553325/Hrusak">Hrusak</a></li>
-                                <li><b>license:</b> <a href="https://3dwarehouse.sketchup.com/tos/#license">3DW: GML</a></li>
-                                <li><b>model type:</b> CAD</li>
-                                <li><b>color type:</b> texture</li>
-                                <li><b>size:</b> 1.0 MB</li>
-                                <li><abbr title="Transformation applied to this model while aligning it with the reference mesh."><b>T<sub>REF</sub>:</b></abbr> <a href="https://data.ciirc.cvut.cz/public/projects/2023CADLoc/data/st_vitus_cathedral/align_trans/D_hrusak.txt">data repository</a></li>
+                                <li><b>image data:</b> <a
+                                        href="https://data.ciirc.cvut.cz/public/projects/2023CADLoc/data/st_vitus_cathedral/images.zip">data
+                                        repository</a></li>
+                                <li><b>splits:</b> <a
+                                        href="https://data.ciirc.cvut.cz/public/projects/2023CADLoc/data/st_vitus_cathedral/query_list.txt">query</a>
+                                    / <a
+                                        href="https://data.ciirc.cvut.cz/public/projects/2023CADLoc/data/st_vitus_cathedral/ref_list.txt">reference</a>
+                                </li>
+                                <li><b>COLMAP models:</b> <a
+                                        href="https://data.ciirc.cvut.cz/public/projects/2023CADLoc/data/st_vitus_cathedral/colmap_query.zip">query</a>
+                                    / <a
+                                        href="https://data.ciirc.cvut.cz/public/projects/2023CADLoc/data/st_vitus_cathedral/colmap_ref.zip">reference</a>
+                                </li>
                             </ul>
                         </div>
-                        <table>
-                        <tbody>
-                            <td><img class="dataset-mesh-thumbnail" src="images/mesh_screenshots/st_vitus_cathedral/hrusak00.png"></td>
-                            <td><img class="dataset-mesh-thumbnail" src="images/mesh_screenshots/st_vitus_cathedral/hrusak01.png"></td>
-                            <td><img class="dataset-mesh-thumbnail" src="images/mesh_screenshots/st_vitus_cathedral/hrusak02.png"></td>
-                        </tbody>
-                        </table>
+                    </div>
+                    <div class="container">
+                        <div class="dataset-cell">
+                            <div class="dataset-text-cell dataset-text-cell-scene">
+                                <h3>Reference MVS model</h3>
+                                <ul>
+                                    <li><b>link:</b> <a
+                                            href="https://data.ciirc.cvut.cz/public/projects/2023CADLoc/data/st_vitus_cathedral/reference_mesh.ply">data
+                                            repository</a> </li>
+                                    <li><b>license:</b> <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC
+                                            BY-NC-SA
+                                            4.0</a></li>
+                                    <li><b>size:</b> 197.3 MB</li>
+                                </ul>
+                            </div>
+                            <table>
+                                <tbody>
+                                    <td><img class="dataset-mesh-thumbnail"
+                                            src="images/mesh_screenshots/st_vitus_cathedral/mvs00.png"></td>
+                                    <td><img class="dataset-mesh-thumbnail"
+                                            src="images/mesh_screenshots/st_vitus_cathedral/mvs01.png"></td>
+                                    <td><img class="dataset-mesh-thumbnail"
+                                            src="images/mesh_screenshots/st_vitus_cathedral/mvs02.png"></td>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="dataset-cell">
+                            <div class="dataset-text-cell dataset-text-cell-scene">
+                                <h3>A (Brian Trepanier)</h3>
+                                <ul>
+                                    <li><b>link:</b> <a
+                                            href="https://data.ciirc.cvut.cz/public/projects/2023CADLoc/data/st_vitus_cathedral/models/st_vitus_A_brian_trepanier_crop.zip">data
+                                            repository</a> </li>
+                                    <li><b>author:</b> <a href="https://sketchfab.com/CMBC">Brian Trepanier</a></li>
+                                    <li><b>license:</b> <a href="https://creativecommons.org/licenses/by/4.0/">CC BY
+                                            4.0</a></li>
+                                    <li><b>model type:</b> MVS</li>
+                                    <li><b>color type:</b> texture</li>
+                                    <li><b>size:</b> 109.4 MB</li>
+                                    <li><abbr
+                                            title="Transformation applied to this model while aligning it with the reference mesh."><b>T<sub>REF</sub>:</b></abbr>
+                                        <a
+                                            href="https://data.ciirc.cvut.cz/public/projects/2023CADLoc/data/st_vitus_cathedral/align_trans/A_brian_trepanier_crop.txt">data
+                                            repository</a></li>
+                                    <li><b>info:</b> Model A from the paper is just the cathedral cropped from model B,
+                                        to make the rendering easier.</li>
+                                </ul>
+                            </div>
+                            <table>
+                                <tbody>
+                                    <td><img class="dataset-mesh-thumbnail"
+                                            src="images/mesh_screenshots/st_vitus_cathedral/brian_trepanier_crop00.png">
+                                    </td>
+                                    <td><img class="dataset-mesh-thumbnail"
+                                            src="images/mesh_screenshots/st_vitus_cathedral/brian_trepanier_crop01.png">
+                                    </td>
+                                    <td><img class="dataset-mesh-thumbnail"
+                                            src="images/mesh_screenshots/st_vitus_cathedral/brian_trepanier_crop02.png">
+                                    </td>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="dataset-cell">
+                            <div class="dataset-text-cell dataset-text-cell-scene">
+                                <h3>B (Brian Trepanier)</h3>
+                                <ul>
+                                    <li><b>link:</b> <a href="https://skfb.ly/o8n8D">Sketchfab</a></li>
+                                    <li><b>author:</b> <a href="https://sketchfab.com/CMBC">Brian Trepanier</a></li>
+                                    <li><b>license:</b> <a href="https://creativecommons.org/licenses/by/4.0/">CC BY
+                                            4.0</a></li>
+                                    <li><b>model type:</b> MVS</li>
+                                    <li><b>color type:</b> texture</li>
+                                    <li><b>size:</b> 284.9 MB</li>
+                                    <li><abbr
+                                            title="Transformation applied to this model while aligning it with the reference mesh."><b>T<sub>REF</sub>:</b></abbr>
+                                        <a
+                                            href="https://data.ciirc.cvut.cz/public/projects/2023CADLoc/data/st_vitus_cathedral/align_trans/B_brian_trepanier_full.txt">data
+                                            repository</a></li>
+                                </ul>
+                            </div>
+                            <table>
+                                <tbody>
+                                    <td><img class="dataset-mesh-thumbnail"
+                                            src="images/mesh_screenshots/st_vitus_cathedral/brian_trepanier00.png"></td>
+                                    <td><img class="dataset-mesh-thumbnail"
+                                            src="images/mesh_screenshots/st_vitus_cathedral/brian_trepanier01.png"></td>
+                                    <td><img class="dataset-mesh-thumbnail"
+                                            src="images/mesh_screenshots/st_vitus_cathedral/brian_trepanier02.png"></td>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="dataset-cell">
+                            <div class="dataset-text-cell dataset-text-cell-scene">
+                                <h3>C (Pera)</h3>
+                                <ul>
+                                    <li><b>link:</b> <a
+                                            href="https://3dwarehouse.sketchup.com/model/21f43816-06c6-4b7a-a477-1d052aa76ddd/StVitus-Cathedral-fixed-normals">3D
+                                            Warehouse</a> (<a
+                                            href="https://3dwarehouse.sketchup.com/model/2b4edabc82da05f41adfc303e9e33d06/StVitus-Cathedral">original</a>)
+                                    </li>
+                                    <li><b>author:</b> <a
+                                            href="https://3dwarehouse.sketchup.com/user/1094908963092441562210615/%D0%9F%D0%B5%D1%80%D0%B0">Pera</a>
+                                    </li>
+                                    <li><b>license:</b> <a href="https://3dwarehouse.sketchup.com/tos/#license">3DW:
+                                            GML</a></li>
+                                    <li><b>model type:</b> CAD</li>
+                                    <li><b>color type:</b> texture</li>
+                                    <li><b>size:</b> 3.7 MB</li>
+                                    <li><abbr
+                                            title="Transformation applied to this model while aligning it with the reference mesh."><b>T<sub>REF</sub>:</b></abbr>
+                                        <a
+                                            href="https://data.ciirc.cvut.cz/public/projects/2023CADLoc/data/st_vitus_cathedral/align_trans/C_pera.txt">data
+                                            repository</a></li>
+                                    <li><b>info:</b> We reuploaded the model with fixed face normals.</li>
+                                </ul>
+                            </div>
+                            <table>
+                                <tbody>
+                                    <td><img class="dataset-mesh-thumbnail"
+                                            src="images/mesh_screenshots/st_vitus_cathedral/pera00.png"></td>
+                                    <td><img class="dataset-mesh-thumbnail"
+                                            src="images/mesh_screenshots/st_vitus_cathedral/pera01.png"></td>
+                                    <td><img class="dataset-mesh-thumbnail"
+                                            src="images/mesh_screenshots/st_vitus_cathedral/pera02.png"></td>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="dataset-cell">
+                            <div class="dataset-text-cell dataset-text-cell-scene">
+                                <h3>D (Hrusak)</h3>
+                                <ul>
+                                    <li><b>link:</b> <a
+                                            href="https://3dwarehouse.sketchup.com/model/6786e4700478dfd83f8fc8dcc50fb74/Prague-Castle-St-Vitus-Cathedral">3D
+                                            Warehouse</a></li>
+                                    <li><b>author:</b> <a
+                                            href="https://3dwarehouse.sketchup.com/user/1158766977984783910553325/Hrusak">Hrusak</a>
+                                    </li>
+                                    <li><b>license:</b> <a href="https://3dwarehouse.sketchup.com/tos/#license">3DW:
+                                            GML</a></li>
+                                    <li><b>model type:</b> CAD</li>
+                                    <li><b>color type:</b> texture</li>
+                                    <li><b>size:</b> 1.0 MB</li>
+                                    <li><abbr
+                                            title="Transformation applied to this model while aligning it with the reference mesh."><b>T<sub>REF</sub>:</b></abbr>
+                                        <a
+                                            href="https://data.ciirc.cvut.cz/public/projects/2023CADLoc/data/st_vitus_cathedral/align_trans/D_hrusak.txt">data
+                                            repository</a></li>
+                                </ul>
+                            </div>
+                            <table>
+                                <tbody>
+                                    <td><img class="dataset-mesh-thumbnail"
+                                            src="images/mesh_screenshots/st_vitus_cathedral/hrusak00.png"></td>
+                                    <td><img class="dataset-mesh-thumbnail"
+                                            src="images/mesh_screenshots/st_vitus_cathedral/hrusak01.png"></td>
+                                    <td><img class="dataset-mesh-thumbnail"
+                                            src="images/mesh_screenshots/st_vitus_cathedral/hrusak02.png"></td>
+                                </tbody>
+                            </table>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-    
 
 
-    <div class="container footer">
-        <a class="git-button" href="https://github.com/v-pnk/cadloc">
-            <svg width="24.5" height="24">
-                <path
-                    d="M 12.213449,0 C 5.4597272,0 0,5.499977 0,12.304199 c 0,5.438977 3.4982354,10.042958 8.3512151,11.672451 0.6067474,0.122499 0.8289965,-0.264749 0.8289965,-0.590498 0,-0.285249 -0.02,-1.262995 -0.02,-2.28174 C 5.7627259,21.837909 5.0552289,19.637668 5.0552289,19.637668 4.5092311,18.211674 3.7002345,17.845175 3.7002345,17.845175 c -1.1119953,-0.753746 0.081,-0.753746 0.081,-0.753746 1.2334948,0.0815 1.8807421,1.262994 1.8807421,1.262994 1.0917455,1.873992 2.8509881,1.344495 3.5587351,1.018496 C 9.3217113,18.578422 9.64546,18.028425 9.9892085,17.722926 7.2794699,17.437677 4.4284818,16.378432 4.4284818,11.652201 c 0,-1.344494 0.484998,-2.4444895 1.2534947,-3.2999859 -0.1212498,-0.3054987 -0.545998,-1.5687435 0.1214992,-3.2594864 0,0 1.0312457,-0.3259986 3.356486,1.2629947 A 11.742451,11.742451 0 0 1 12.213449,5.9482251 c 1.031246,0 2.082491,0.1427494 3.053237,0.4074983 2.32549,-1.5889933 3.356736,-1.2629947 3.356736,-1.2629947 0.667497,1.6907429 0.242499,2.9539877 0.12125,3.2594864 0.788746,0.8554964 1.253744,1.9554919 1.253744,3.2999859 0,4.726231 -2.850988,5.764976 -5.580976,6.070725 0.444998,0.386998 0.828996,1.120245 0.828996,2.28149 0,1.649993 -0.02,2.974238 -0.02,3.381486 0,0.325999 0.222499,0.713247 0.828997,0.590998 4.85298,-1.629993 8.351215,-6.233724 8.351215,-11.672701 C 24.426648,5.499977 18.946921,0 12.213449,0 Z" />
-            </svg>
-            <div class="git-button-text">
-                benchmark GitHub repository
-            </div>
-        </a>
-        <span class="update-date">
-            <!-- last update: 2023-03-14 15:20:09 GMT -->
-        </span>
-    </div>
-    
-    <script src="scripts/update-date.js"></script>
+
+        <div class="container footer">
+            <a class="git-button" href="https://github.com/v-pnk/cadloc">
+                <svg width="24.5" height="24">
+                    <path
+                        d="M 12.213449,0 C 5.4597272,0 0,5.499977 0,12.304199 c 0,5.438977 3.4982354,10.042958 8.3512151,11.672451 0.6067474,0.122499 0.8289965,-0.264749 0.8289965,-0.590498 0,-0.285249 -0.02,-1.262995 -0.02,-2.28174 C 5.7627259,21.837909 5.0552289,19.637668 5.0552289,19.637668 4.5092311,18.211674 3.7002345,17.845175 3.7002345,17.845175 c -1.1119953,-0.753746 0.081,-0.753746 0.081,-0.753746 1.2334948,0.0815 1.8807421,1.262994 1.8807421,1.262994 1.0917455,1.873992 2.8509881,1.344495 3.5587351,1.018496 C 9.3217113,18.578422 9.64546,18.028425 9.9892085,17.722926 7.2794699,17.437677 4.4284818,16.378432 4.4284818,11.652201 c 0,-1.344494 0.484998,-2.4444895 1.2534947,-3.2999859 -0.1212498,-0.3054987 -0.545998,-1.5687435 0.1214992,-3.2594864 0,0 1.0312457,-0.3259986 3.356486,1.2629947 A 11.742451,11.742451 0 0 1 12.213449,5.9482251 c 1.031246,0 2.082491,0.1427494 3.053237,0.4074983 2.32549,-1.5889933 3.356736,-1.2629947 3.356736,-1.2629947 0.667497,1.6907429 0.242499,2.9539877 0.12125,3.2594864 0.788746,0.8554964 1.253744,1.9554919 1.253744,3.2999859 0,4.726231 -2.850988,5.764976 -5.580976,6.070725 0.444998,0.386998 0.828996,1.120245 0.828996,2.28149 0,1.649993 -0.02,2.974238 -0.02,3.381486 0,0.325999 0.222499,0.713247 0.828997,0.590998 4.85298,-1.629993 8.351215,-6.233724 8.351215,-11.672701 C 24.426648,5.499977 18.946921,0 12.213449,0 Z" />
+                </svg>
+                <div class="git-button-text">
+                    benchmark GitHub repository
+                </div>
+            </a>
+            <span class="update-date">
+                <!-- last update: 2023-03-14 15:20:09 GMT -->
+            </span>
+        </div>
+
+        <script src="scripts/update-date.js"></script>
 </body>
 
 </html>

@@ -213,7 +213,7 @@ a.curr-nav:hover li {
 /* Datasets list */
 .dataset-block {
     border-style: solid;
-    border-width: 2px 0 0 0;
+    border-width: 4px 0 0 0;
     border-color: var(--color-one-hover);
     padding: 10px 0 0 0;
 }
@@ -272,7 +272,8 @@ a.curr-nav:hover li {
     float: left;
     margin-right: 24px;
     vertical-align: top;
-    width: 400px;
+    /* width: 600px; */
+    /* width: 400px; */
     /* position: absolute; */
     /* top: 0; */
     /* left: 0; */
@@ -284,6 +285,7 @@ a.curr-nav:hover li {
 
 .dataset-text-cell a {
     text-decoration: underline;
+    text-decoration-skip-ink: auto;
 }
 
 .dataset-text-cell ul {
@@ -293,8 +295,14 @@ a.curr-nav:hover li {
     list-style-type: none;
 }
 
+.dataset-text-cell-top {
+    width: 600px;
+    margin-left: 12px;
+}
+
 .dataset-text-cell-scene {
     height: 100%;
+    width: 400px;
 }
 
 .dataset-text-cell-scene h3 {
@@ -371,7 +379,8 @@ pre button:hover {
 
 /* Results tables */
 .result-text a {
-     text-decoration: underline;
+    text-decoration: underline;
+    text-decoration-skip-ink: auto;
 }
 
 .result-text h3 {
